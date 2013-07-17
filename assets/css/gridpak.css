@@ -4,7 +4,18 @@
  * Generator - http://gridpak.com/
  * Created by @erskinedesign
  */
- 
+
+body,
+html,
+div {
+    margin:0;
+    padding:0;
+}
+
+/*
+Page is the center aligned 95% width container. Positive is relative so Gridpak overlay appears in the proper position
+    TODO: update the gridpak.js file to use '.page' as its container
+*/
  .page {
      margin: 0 auto;
      max-width: 100%;
@@ -48,7 +59,7 @@
         
         .col {
             margin-left:2%;
-            padding:0 1.5%;
+            padding:0 2%;
         }
         
         .row .col:first-child {
@@ -71,7 +82,8 @@
         .span_2 {
             width:15.0%;
         }
-        .span_3 {
+        .span_3,
+        .box_2 {
             width:23.5%;
         }
         .span_4 {
@@ -80,7 +92,8 @@
         .span_5 {
             width:40.5%;
         }
-        .span_6 {
+        .span_6,
+        .description {
             width:49.0%;
         }
         .span_7 {
@@ -98,7 +111,8 @@
         .span_11 {
             width:91.5%;
         }
-        .span_12 {
+        .span_12, 
+        .header {
             margin-left:0;
             width:100%;
         }
@@ -127,13 +141,11 @@
         .col {
             margin-left:2%;
             padding:0 1.5%;
-        }
+        } 
         
         .row .col:first-child {
             margin-left:0;
         }
-        
-        
         
         .span_1 {
             width:6.5%;
@@ -141,7 +153,8 @@
         .span_2 {
             width:15.0%;
         }
-        .span_3 {
+        .span_3,
+        .box_2 {
             width:23.5%;
         }
         .span_4 {
@@ -150,7 +163,7 @@
         .span_5 {
             width:40.5%;
         }
-        .span_6 {
+        .span_6, .description {
             width:49.0%;
         }
         .span_7 {
@@ -168,7 +181,8 @@
         .span_11 {
             width:91.5%;
         }
-        .span_12 {
+        .span_12,
+        .header {
             margin-left:0;
             width:100%;
         }
