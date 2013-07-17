@@ -34,7 +34,7 @@ the gridpak.js file to use '.page' as it's container.
     -moz-background-clip:padding-box !important;
     -webkit-background-clip:padding-box !important;
     background-clip:padding-box !important;
-    background: #777;
+   
 	margin-bottom: 12px;
 }
 
