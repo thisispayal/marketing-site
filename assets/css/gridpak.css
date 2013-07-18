@@ -33,6 +33,7 @@ the gridpak.js file to use '.page' as it's container.
     -moz-background-clip:padding-box !important;
     -webkit-background-clip:padding-box !important;
     background-clip:padding-box !important;
+    /*background: #f0f0f0;*/
     margin-bottom: 12px;
 }
 
@@ -154,30 +155,44 @@ the gridpak.js file to use '.page' as it's container.
         }
         */
         
-        .span_1 {
+        .span_1{
             width:8.33333333333%;
         }
-        .span_2 {
+
+         .span_1_5, .spacer {
+            width: 12.4999999999%;
+           
+        }
+
+        .span_2, .pricing {
             width:16.6666666667%;
         }
+
+        .span_2_3 {
+            width: 19.444444444%;
+
+        }
+
+        .span_2_5{
+            width: 20.83333335%;
+        }
+
         .span_3,
         .navigation,
         .related_content {
             width:25.0%;
-            height: 400px;
+           
         }
         .span_4,
         .media_block {
             width:33.3333333333%;
-            height: 200px;
-        }
+                 }
         .span_5 {
             width:41.6666666667%;
         }
         .span_6,
         .main_content {
             width:50.0%;
-            height: 400px;
         }
         .span_7 {
             width:58.3333333333%;
@@ -198,7 +213,7 @@ the gridpak.js file to use '.page' as it's container.
         .header,
         .footer {
             width:100%;
-            height: 100px;
+          
             margin-left:0;
         }
     }
