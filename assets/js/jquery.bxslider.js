@@ -62,7 +62,7 @@
 		autoControlsSelector: null,
 		
 		// AUTO
-		auto: true,
+		auto: false,
 		pause: 4000,
 		autoStart: true,
 		autoDirection: 'next',
