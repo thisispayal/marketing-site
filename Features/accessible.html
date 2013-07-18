@@ -10,14 +10,85 @@
         <!-- CSS -->
         <link rel="stylesheet" media="all" type="text/css" href="../assets/css/gridpak.css" />
         <link rel="stylesheet" meida="all" type="text/css" href="../assets/css/features.css">
-        <link rel="stylesheet" media="all" type="text/css" href="../assets/css/slider.css" />    
+        <link rel="stylesheet" media="all" type="text/css" href="../assets/css/slider.css" />   
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="../assets/js/jquery.bxslider.js"></script>
+        <link href="../assets/css/jquery.bxslider.css" rel="stylesheet" />
+ 
+        <script type="text/javascript">
+            var descriptions = [
+                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, eligendi, corporis, cupiditate quisquam nostrum deleniti itaque sapiente eum placeat dolore recusandae porro nesciunt", 
+                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quos, doloribus ipsam fugiat rem architecto est temporibus iusto quisquam? Ex!", 
+                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, eius, officiis, dolorem sit nesciunt hic velit magni dolores porro et consectetur veritatis ratione sequi sint id placeat distinctio. Magnam numquam eligendi possimus ut placeat ducimus odio corporis a deserunt consequuntur. Sequi eaque maiores fugit doloribus voluptatem! Eligendi vitae cupiditate quae.", 
+                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, sunt blanditiis rerum."
+                        ];
+
+            var titles = [
+                            "Accessible Anywhere",
+                            "HIPPA Secure",
+                            "In Browser Viewing",
+                            "Support and Service"
+                        ];
+
+            var i = 0;
+            $(document).ready(function(){
+                var slider = $('.bxslider').bxSlider({
+                    mode: 'fade',
+                    captions: true
+                });
+
+                $('.no_js').hide();
+                $('.js').show();
+
+                $('#title').text(titles[i]);
+                    $('#description').text(descriptions[i]);
+                
+                $('.bx-prev').click(function(){
+                    i = (i - 1) % descriptions.length;
+                    j = (i + 4) % descriptions.length;
+                    $('#title').text(titles[j]);
+                    $('#description').text(descriptions[j]);                    
+                });
+
+                $('.bx-next').click(function(){
+                    i = (i + 1) % descriptions.length;
+                    $('#title').text(titles[i]);
+                    $('#description').text(descriptions[i]);                    
+                });
+
+                $('.accessible').click(function(){
+                    slider.goToSlide(0);
+                    $('#title').text(titles[0]);
+                    $('#description').text(descriptions[0]);
+                });
+
+                $('.secure').click(function(){
+                    slider.goToSlide(1);
+                    $('#title').text(titles[1]);
+                    $('#description').text(descriptions[1]);
+                })
+
+                $('.viewing').click(function(){
+                    slider.goToSlide(2);
+                    $('#title').text(titles[2]);
+                    $('#description').text(descriptions[2]);
+                })
+                $('.support').click(function(){
+                    slider.goToSlide(3);
+                    $('#title').text(titles[3]);
+                    $('#description').text(descriptions[3]);
+                })
+            
+            });             
+        </script>
     </head>
     
     <body> 
-        <div class="page">
+        <div class="page no_js">
             <div id="features">
                 <div class="row">
-                     <div class="span_2 col margin" >
+                    <div class="span_2 col margin" >
                         <a href="support.html"><img src="../assets/img/left_arrow.png"></a>
                     </div>                
                     <div class="span_2 col">
@@ -81,6 +152,153 @@
                     </div>
                 </div>
             </div>  
+        </div>
+        <div class="js" style="display:none;">
+            <ul class="bxslider">
+            <li>
+                <ul class="inline">
+                    <li>
+                        <div class="features selected accessible">
+                                <img src="../assets/img/features/accessible.png" width="280px"><br />
+                                <b>Accessible Anywhere</b>
+                                <p>View your image orders from <br />
+                                    any Internet-connected device</p>                           
+                        </div>                  
+                    </li>
+                    <li>
+                        <div class="features secure">
+                                <img src="../assets/img/features/secure.png" width="280px"><br />
+                                <b>HIPPA Secure</b>
+                                <p>Click to download our security credentials</p>                           
+                        </div>                  
+                    </li><li>
+                        <div class="features viewing">
+                                <img src="../assets/img/features/viewing.png" width="280px"><br />
+                                <b>In Browser Viewing</b>
+                                <p>View your images right in the browser</p>                            
+                        </div>                  
+                    </li><li>
+                        <div class="features support">
+                                <img src="../assets/img/features/support.png" width="280px"><br />
+                                <b>Support and Service</b>
+                                <p>We provide training on our software, <br />
+                                    network training</p>                            
+                        </div>                  
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="inline">
+
+                    <li>
+                        <div class="features selected secure">
+                                <img src="../assets/img/features/secure.png" width="280px"><br />
+                                <b>HIPPA Secure</b>
+                                <p>Click to download our security credentials</p>                           
+                        </div>                  
+                    </li>
+                    <li>
+                        <div class="features viewing">
+                                <img src="../assets/img/features/viewing.png" width="280px"><br />
+                                <b>In Browser Viewing</b>
+                                <p>View your images right in the browser</p>                            
+                        </div>                  
+                    </li>
+                    <li>
+                        <div class="features support">
+                                <img src="../assets/img/features/support.png" width="280px"><br />
+                                <b>Support and Service</b>
+                                <p>We provide training on our software, <br />
+                                    network training</p>                            
+                        </div>                  
+                    </li>
+                    <li>
+                        <div class="features accessible">
+                                <img src="../assets/img/features/accessible.png" width="280px"><br />
+                                <b>Accessible Anywhere</b>
+                                <p>View your image orders from <br />
+                                    any Internet-connected device</p>                           
+                        </div>                  
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="inline">             
+                    <li>
+                        <div class="features selected viewing">
+                                <img src="../assets/img/features/viewing.png" width="280px"><br />
+                                <b>In Browser Viewing</b>
+                                <p>View your images right in the browser</p>                            
+                        </div>                  
+                    </li>
+                    <li>
+                        <div class="features support">
+                                <img src="../assets/img/features/support.png" width="280px"><br />
+                                <b>Support and Service</b>
+                                <p>We provide training on our software, <br />
+                                    network training</p>                            
+                        </div>                  
+                    </li>
+                    <li>
+                        <div class="features accessible">
+                                <img src="../assets/img/features/accessible.png" width="280px"><br />
+                                <b>Accessible Anywhere</b>
+                                <p>View your image orders from <br />
+                                    any Internet-connected device</p>                           
+                        </div>                  
+                    </li>
+                        <li>
+                        <div class="features secure">
+                                <img src="../assets/img/features/secure.png" width="280px"><br />
+                                <b>HIPPA Secure</b>
+                                <p>Click to download our security credentials</p>                           
+                        </div>                  
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="inline">             
+
+                    <li>
+                        <div class="features selected support">
+                                <img src="../assets/img/features/support.png" width="280px"><br />
+                                <b>Support and Service</b>
+                                <p>We provide training on our software, <br />
+                                    network training</p>                                
+                        </div>                  
+                    </li>
+                    <li>
+                        <div class="features accessible">
+                                <img src="../assets/img/features/accessible.png" width="280px"><br />
+                                <b>Accessible Anywhere</b>
+                                <p>View your image orders from <br />
+                                    any Internet-connected device</p>                               
+                        </div>                  
+                    </li>
+                        <li>
+                        <div class="features secure">
+                                <img src="../assets/img/features/secure.png"width="280px"><br />
+                                <b>HIPPA Secure</b>
+                                <p>Click to download our security credentials</p>                           
+                        </div>                  
+                    </li>
+                                        <li>
+                        <div class="features viewing">
+                                <img src="../assets/img/features/viewing.png" width="280px"><br />
+                                <<b>In Browser Viewing</b>
+                                <p>View your images right in the browser</p>                                
+                        </div>                  
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+
+
+    <div id="feature_information">
+        <div id="title"></div>
+        <div id="description"></div>
+    </div>
         </div>
     </body>
 </html>
