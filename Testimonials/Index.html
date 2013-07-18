@@ -9,12 +9,62 @@
         
         <!-- CSS -->
         <link rel="stylesheet" media="all" type="text/css" href="../assets/css/gridpak.css" />
-        <link rel="stylesheet" media="all" type="text/css" href="../assets/css/testimonials.css" />    
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="../assets/js/jquery.bxslider.js"></script>
+        <link href="../assets/css/jquery.bxslider.css" rel="stylesheet" />
+
+        <style type="text/css">
+            .bxslider li{
+                background: black;
+                color: white;
+            }
+
+            .bxslider img{
+                padding-left: 10%;
+                padding-top: 1%;
+                padding-bottom: 5%;
+                padding-right: 10%;
+                float: left;
+            }
+
+            .caption{
+                padding-top: 3%;
+                padding-right: 10%;
+            }
+
+            .source{
+                padding-left: 50%;
+
+            }
+
+            .name{
+                font-size: 30px;
+                font-style: oblique; 
+            }
+
+            .title{
+                font-size: 25px;
+                font-style: oblique;
+                color: #48bffa;
+            }
+            
+        </style>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.bxslider').bxSlider();
+                $('#features_noJS').hide();
+                $('#features_JS').show();
+            });
+
+
+        </script>   
     </head>
     
     <body bgcolor="#000"> 
 
-        <div id="features">
+        <div id="features_noJS">
             <div class="row">
                 <div class="span_1 col" >
                     <a href="slides/slide_1.html"><img src="../Assets/img/left_arrow.png"></a>
@@ -41,6 +91,48 @@
                    <a href="slides/slide_1.html"><img src="../Assets/img/right_arrow.png"></a>
                 </div>
             </div>
+        </div>
+
+        <div id="features_JS" style="display:none;">
+            <div class="row">
+                <div class="span_12 col">
+                    <ul class="bxslider">
+            <li><img src="../assets/img/testimonial/slider/testimonial_1.png">
+                <div class="caption">
+                    <h3>"Since MedStar Washington Hospital center instituted ImageShare, it has consulted in more than <b>1,000 cases</b> with approximately <b>200 facilities</b> world wide &#8212; second opinions with the potential to not only speed care delivery, but save healthcare dollars, as well."</h3>
+                </div>
+                <div class="source">
+                    <span class="name">&#8212; Dr. FirstName LastName,</span> <span class="title">alongandwonderfultitle</span>
+                </div>
+            </li>
+            <li><img src="../assets/img/testimonial/slider/testimonial_2.png">
+                <div class="caption">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, accusantium quo in cupiditate architecto beatae quas numquam expedita dolorum at?</h3>
+                </div>
+                <div class="source">
+                    <span class="name">&#8212; Dr. FirstName LastName,</span> <span class="title">alongandwonderfultitle</span>
+                </div>
+            </li>
+            <li><img src="../assets/img/testimonial/slider/testimonial_3.png">
+                <div class="caption">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, reprehenderit labore quaerat architecto commodi dolorem quia minus voluptatibus dignissimos rerum aliquid maiores. Enim, odit, numquam iste quas esse deserunt dolorum fugit consectetur cupiditate et tenetur totam repellat sequi aperiam perferendis.</h3>
+                </div>
+                <div class="source">
+                    <span class="name">&#8212; Dr. FirstName LastName,</span> <span class="title">alongandwonderfultitle</span>
+                </div>
+            </li>
+            <li><img src="../assets/img/testimonial/slider/testimonial_4.png">
+                <div class="caption">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, fugiat, officia, animi tempore ut cupiditate dolorem molestias perferendis aliquam qui ducimus magni eius temporibus inventore quidem repellat aliquid. Placeat, officia.</h3>
+                </div>
+                <div class="source">
+                    <span class="name">&#8212; Dr. FirstName LastName,</span> <span class="title">alongandwonderfultitle</span>
+                </div>
+            </li>
+        </ul>
+                </div>
+            </div>
+        </div>
   
         <script src="../gridpak/demo/gridpak.demo.js"></script>
     </body>
