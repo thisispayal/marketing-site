@@ -16,6 +16,10 @@
     font-size:60px;
 }
 
+.heading_3 {
+    font-size:28px;
+}
+
 /*Use for the two box page*/
 .box_2.col{
     text-align:center;
@@ -25,4 +29,29 @@
 .span_6.col {
     margin-top:4%;
     font-size:20px;
+}
+
+.description {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 150%;
+}
+
+/*overview*/
+body.overview {
+    background: url(../img/overview/subtle-texture.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+img#overview-image {
+    max-width:100%;
+    max-height:100%;
+    text-align:center;
+}
+
+#overview-description {
+    padding-top: 5%;
+    font-size:150%;
+    padding-bottom:5%;
 }
