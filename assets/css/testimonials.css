@@ -1,0 +1,33 @@
+.bxslider_testimonial li{
+                background: black;
+                color: white;
+            }
+
+            .bxslider_testimonial img{
+                padding-left: 10%;
+                padding-top: 1%;
+                padding-bottom: 5%;
+                padding-right: 10%;
+                float: left;
+            }
+
+            .caption{
+                padding-top: 3%;
+                padding-right: 10%;
+            }
+
+            .source{
+                padding-left: 50%;
+
+            }
+
+            .name{
+                font-size: 30px;
+                font-style: oblique; 
+            }
+
+            .title{
+                font-size: 25px;
+                font-style: oblique;
+                color: #48bffa;
+            }
