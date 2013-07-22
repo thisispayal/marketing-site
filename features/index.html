@@ -1,0 +1,252 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var direction = 1;
+				$('.slider_icons > li').slice(4).css('display', 'none');
+				$('.slider_descriptions> li').slice(1).css('display', 'none');
+				$('.slider_icons > li').slice(0,1).addClass("selected");
+
+
+				$("#next").click(function(){
+					scroll("next");
+				})
+
+
+				$("#prev").click(function(){
+					scroll("prev");
+				})
+
+				function scroll(direction){					
+					var icons_list = $(".slider_icons");
+					var icons = icons_list.children("li");
+
+					if (direction == "prev"){
+						icons_list.prepend(icons.slice(8,12));
+					}
+					else if (direction == "next"){
+						icons_list.append(icons.slice(0,4));
+					}
+
+					$('.slider_icons > li').slice(0).removeClass("selected");
+					$('.slider_icons > li').slice(0, 4).removeAttr('style');
+					$('.slider_icons > li').slice(4).css('display', 'none');
+					$('.slider_icons > li').slice(0,1).addClass("selected");
+
+					var descriptions_list = $(".slider_descriptions")
+					var descriptions = descriptions_list.children("li");
+
+					if (direction == "prev"){
+						descriptions_list.prepend(descriptions.slice(8,12));
+					}
+					else if (direction == "next"){
+						descriptions_list.append(descriptions.slice(0,4));
+					}		
+					$('.slider_descriptions > li').slice(0, 1).removeAttr('style');
+					$('.slider_descriptions > li').slice(1).css('display', 'none');
+				}
+
+				$("div").click(function () {  	
+					var descriptions_list = $(".slider_descriptions")
+					var descriptions = descriptions_list.children("li");
+					var index = $("div").index(this);
+
+					$('.slider_descriptions > li').slice(index, index+1).removeAttr('style');
+					$('.slider_descriptions > li').slice(0, index).css('display', 'none');
+					$('.slider_descriptions > li').slice(index+1).css('display', 'none');
+				})
+			});
+
+		</script>
+
+		<style type="text/css">
+			ul li{
+
+				display: inline;
+				font-size: 24px;
+				
+			}
+
+			li.hidden{
+				display: none;
+			}
+
+			.slider_icons > li > div > img{
+
+				width: 220px;
+			}
+
+
+			.slider_icons > li > div{
+	
+				float: left;
+				text-align: center;
+				margin-left: 85px;
+				margin-right: 85px;
+			}
+
+			.slider_icons > li > div:hover{
+				color:red;
+				cursor: pointer;
+			}
+
+			.slider_descriptions > li > p{
+				text-align: center;
+			}
+
+			.slider_icons{
+				margin-bottom: 250px;
+			}
+
+			#next, #prev{
+				cursor: pointer;
+			}
+
+			table{
+				table-layout: fixed;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<table>
+			<tr>
+				<td><img src="../assets/img/left_arrow.png" id="prev"></td>
+				<td>
+					<ul class="slider_icons">
+						<li>
+							<div class="selected">
+								<img src="../assets/img/features/accessible.png">
+								<p>Accessible Anywhere 1</p>
+							</div>
+						</li>
+						<li>
+							<div class="fade">
+								<img src="../assets/img/features/secure.png">
+								<p>HIPPA Secure 1</p>
+							</div class="fade">
+						</li>
+						<li>
+							<div class="fade">
+								<img src="../assets/img/features/support.png">
+								<p>Support & Service 1</p>
+							</div>
+						</li>
+						<li>
+							<div class="fade">
+								<img src="../assets/img/features/viewing.png">
+								<p>Viewing 1</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="../assets/img/features/accessible.png">
+								<p>Accessible Anywhere 2</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="../assets/img/features/secure.png">
+								<p>HIPPA Secure 2</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="../assets/img/features/support.png">
+								<p>Support & Service 2</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="../assets/img/features/viewing.png">
+								<p>Viewing 2</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="../assets/img/features/accessible.png">
+								<p>Accessible Anywhere 3</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="../assets/img/features/secure.png">
+								<p>HIPPA Secure 3</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="../assets/img/features/support.png">
+								<p>Support & Service 3</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="../assets/img/features/viewing.png">
+								<p>Viewing 3</p>
+							</div>
+						</li>														
+					</ul>
+				</td>
+				<td>
+				<td><img src="../assets/img/right_arrow.png" id="next"></td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<ul class="slider_descriptions">
+						<li><h2>Accessible Anywhere 1</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, delectus tempora repudiandae libero rerum similique iste dolorem officiis alias explicabo voluptates sint quod assumenda sequi ullam omnis doloribus ut provident id ipsa sunt nihil nesciunt corrupti! Esse voluptas nihil eum!</p>
+						</li>
+						<li>
+							<h2>HIPPA Secure 1</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, dolores laudantium error autem quasi minima asperiores quas blanditiis natus assumenda. Nisi libero ipsam accusamus ducimus corporis nesciunt distinctio! Quam, temporibus eligendi commodi atque quod quasi fugiat amet soluta illum porro!</p>
+						</li>
+						<li>
+							<h2>Support & Service 1 </h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, labore, rem sed error assumenda ea reiciendis velit dicta ipsum voluptas tenetur quidem maiores aliquid modi.</p>
+						</li>
+						<li>
+							<h2>In Browser Viewing 1</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, nemo, saepe, accusantium dicta id officia beatae totam repellendus quia dolorem blanditiis atque provident vero! Repellendus!</p>
+						</li>
+						<li><h2>Accessible Anywhere 2</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, delectus tempora repudiandae libero rerum similique iste dolorem officiis alias explicabo voluptates sint quod assumenda sequi ullam omnis doloribus ut provident id ipsa sunt nihil nesciunt corrupti! Esse voluptas nihil eum!</p>
+						</li>
+						<li>
+							<h2>HIPPA Secure 2</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, dolores laudantium error autem quasi minima asperiores quas blanditiis natus assumenda. Nisi libero ipsam accusamus ducimus corporis nesciunt distinctio! Quam, temporibus eligendi commodi atque quod quasi fugiat amet soluta illum porro!</p>
+						</li>
+						<li>
+							<h2>Support & Service 2</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, labore, rem sed error assumenda ea reiciendis velit dicta ipsum voluptas tenetur quidem maiores aliquid modi.</p>
+						</li>
+						<li>
+							<h2>In Browser Viewing 2</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, nemo, saepe, accusantium dicta id officia beatae totam repellendus quia dolorem blanditiis atque provident vero! Repellendus!</p>
+						</li>
+						<li><h2>Accessible Anywhere 3</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, delectus tempora repudiandae libero rerum similique iste dolorem officiis alias explicabo voluptates sint quod assumenda sequi ullam omnis doloribus ut provident id ipsa sunt nihil nesciunt corrupti! Esse voluptas nihil eum!</p>
+						</li>
+						<li>
+							<h2>HIPPA Secure 3</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, dolores laudantium error autem quasi minima asperiores quas blanditiis natus assumenda. Nisi libero ipsam accusamus ducimus corporis nesciunt distinctio! Quam, temporibus eligendi commodi atque quod quasi fugiat amet soluta illum porro!</p>
+						</li>
+						<li>
+							<h2>Support & Service 3</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, labore, rem sed error assumenda ea reiciendis velit dicta ipsum voluptas tenetur quidem maiores aliquid modi.</p>
+						</li>
+						<li>
+							<h2>In Browser Viewing 3</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, nemo, saepe, accusantium dicta id officia beatae totam repellendus quia dolorem blanditiis atque provident vero! Repellendus!</p>
+						</li>
+					</ul>
+				</td>
+				<td></td>
+			</tr>
+		</table>		
+	</body>
+</html>
