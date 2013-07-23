@@ -166,7 +166,7 @@ the gridpak.js file to use '.page' as it's container.
             width: 12.4999999999%;
         }
 
-        .span_2, .pricing {
+        .span_2{
             width:16.6666666667%;
         }
 

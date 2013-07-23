@@ -1,73 +1,73 @@
+$(document).ready(function(){
+                var intv;
+                $('.slider_icons > li').slice(4).hide();
+                $('.slider_descriptions> li').slice(1).hide();
+                $('.slider_icons > li > div').first().addClass("selected");
 
-            var descriptions = [
-                        /* Accessible Anywhere Description */
-                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, eligendi, corporis, cupiditate quisquam nostrum deleniti itaque sapiente eum placeat dolore recusandae porro nesciunt", 
+                $("#next").click(function(){
+                    scroll("next");
+                })
 
-                        /* HIPPA Secure Description */
-                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quos, doloribus ipsam fugiat rem architecto est temporibus iusto quisquam? Ex!", 
 
-                        /* In Browser Viewing Description */
-                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, eius, officiis, dolorem sit nesciunt hic velit magni dolores porro et consectetur veritatis ratione sequi sint id placeat distinctio. Magnam numquam eligendi possimus ut placeat ducimus odio corporis a deserunt consequuntur. Sequi eaque maiores fugit doloribus voluptatem! Eligendi vitae cupiditate quae.", 
+                $("#prev").click(function(){
+                    scroll("prev");
+                })
 
-                        /* Support and Service Description */
-                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, sunt blanditiis rerum."
-                        ];
+                function auto(){
+                    intv = setInterval(function() {
+                        scroll("next");
+                    }, 4000 );       
+                }
+                auto(); // to start immediately auto-slide
 
-            var titles = [
-                            "Accessible Anywhere",
-                            "HIPPA Secure",
-                            "In Browser Viewing",
-                            "Support and Service"
-                        ];
-
-            var i = 0;
-            $(document).ready(function(){
-                var slider = $('.bxslider_features').bxSlider({
-                    mode: 'fade',
-                    captions: true
-                });
-
-                $('.no_js').hide();
-                $('.js').show();
-
-                $('#title').text(titles[i]);
-                    $('#description').text(descriptions[i]);
+                // PAUSE ON MOUSEOVER
                 
-                $('.bx-prev').click(function(){
-                    i = (i - 1) % descriptions.length;
-                    j = (i + 4) % descriptions.length;
-                    $('#title').text(titles[j]);
-                    $('#description').text(descriptions[j]);                    
+                $('.features_slider').on('mouseenter mouseleave', function( e ){
+                    var onMouEnt = e.type=='mouseenter' ? clearInterval(intv) : auto() ;
                 });
 
-                $('.bx-next').click(function(){
-                    i = (i + 1) % descriptions.length;
-                    $('#title').text(titles[i]);
-                    $('#description').text(descriptions[i]);                    
-                });
 
-                $('.accessible').click(function(){
-                    slider.goToSlide(0);
-                    $('#title').text(titles[0]);
-                    $('#description').text(descriptions[0]);
-                });
+                function scroll(direction){                 
+                    var icons_list = $(".slider_icons");
+                    var icons = icons_list.children("li");
 
-                $('.secure').click(function(){
-                    slider.goToSlide(1);
-                    $('#title').text(titles[1]);
-                    $('#description').text(descriptions[1]);
-                })
+                    if (direction == "prev"){
+                        icons_list.prepend(icons.slice(icons.length - 4,icons.length)).effect("slide");
+                    }
+                    else if (direction == "next"){
+                        icons_list.append(icons.slice(0,4)).effect("slide",{direction: 'right'});
+                    }
 
-                $('.viewing').click(function(){
-                    slider.goToSlide(2);
-                    $('#title').text(titles[2]);
-                    $('#description').text(descriptions[2]);
+                    $('.slider_icons > li > div').slice(0).removeClass("selected");
+                    $('.slider_icons > li > div').first().addClass("selected");
+
+                    $('.slider_icons > li').slice(0, 4).show();
+                    $('.slider_icons > li').slice(4).hide();
+                
+
+                    var descriptions_list = $(".slider_descriptions")
+                    var descriptions = descriptions_list.children("li");
+
+                    if (direction == "prev"){
+                        descriptions_list.prepend(descriptions.slice(descriptions.length - 4, descriptions.length));
+                    }
+                    else if (direction == "next"){
+                        descriptions_list.append(descriptions.slice(0,4));
+                    }       
+                    $('.slider_descriptions > li').slice(0, 1).show();
+                    $('.slider_descriptions > li').slice(1).hide();
+                }
+
+                $(".slider_icons > li > div").click(function () {   
+                    var descriptions_list = $(".slider_descriptions")
+                    var descriptions = descriptions_list.children("li");
+                    var index = $(".slider_icons > li > div").index(this);
+    
+                    $('.slider_descriptions > li').slice(index, index+1).show();                    
+                    $('.slider_descriptions > li').slice(0, index).hide();
+                    $('.slider_descriptions > li').slice(index+1).hide();
+
+                    $('.slider_icons > li > div').slice(0).removeClass("selected");
+                    $('.slider_icons > li > div').slice(index, index+1).addClass("selected");
                 })
-                $('.support').click(function(){
-                    slider.goToSlide(3);
-                    $('#title').text(titles[3]);
-                    $('#description').text(descriptions[3]);
-                })
-            
-            });             
-  
+            });
