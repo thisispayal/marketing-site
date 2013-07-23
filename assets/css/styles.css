@@ -4,6 +4,61 @@
  *
  */
 
+/** header **/
+
+.site_header {
+    width: 100%;
+    position: fixed;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(86, 86, 86, .95);
+    z-index: 9999;
+}
+
+span.contact {
+    margin-right: 150px;
+}
+.trial_button {
+    margin-top: -10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+    background-color:#f76839;
+    display:inline-block;
+    color:#ffffff;
+    font-family:Verdana;
+    font-size:15px;
+    font-weight:bold;
+    padding:9px 14px;
+    text-decoration:none;
+    float: right;
+}.trial_button:hover {
+    background-color:#6b6b6b;
+}.trial_button:active {
+    position:relative;
+    
+}
+
+.site_header img{
+    float: left;
+}
+
+.site_header ul{    
+    text-align: right;
+    margin-right: 20px;
+}
+
+.site_header ul li{
+    display: inline;
+    list-style-type: none;
+}
+
+/** overall **/
+#content{
+    padding-top: 93px;
+     overflow: scroll;
+}
+
 /*support*/
 
 /*Use for the section heading formatting*/
