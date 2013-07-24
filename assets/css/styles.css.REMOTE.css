@@ -4,70 +4,6 @@
  *
  */
 
-body{
-    font-family: 'Open Sans', sans-serif;
-}
-/** header **/
-
-.site_header {
-    width: 100%;
-    position: fixed;
-    color: white;
-    font-size: 20px;
-    background-color: rgba(86, 86, 86, .95);
-    z-index: 10000;
-
-}
-
-.site_header a{
-    color: white;
-    text-decoration: none;
-}
-
-span.contact {
-    margin-right: 150px;
-}
-.trial_button {
-    margin-top: -10px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    margin-right: 25px;
-    background-color:#f76839;
-    display:inline-block;
-    color:#ffffff;
-    font-family:Verdana;
-    font-size:15px;
-    font-weight:bold;
-    padding:9px 14px;
-    text-decoration:none;
-    float: right;
-}.trial_button:hover {
-    background-color:#6b6b6b;
-}.trial_button:active {
-    position:relative;
-    
-}
-
-#header_img{
-    float: left;
-}
-
-.site_header ul{    
-    text-align: right;
-    margin-right: 20px;
-}
-
-.site_header ul li{
-    display: inline;
-    list-style-type: none;
-}
-
-/** overall **/
-#content{
-    padding-top: 93px;
-     overflow: scroll;
-}
-
 /*support*/
 
 /*Use for the section heading formatting*/
@@ -80,10 +16,6 @@ span.contact {
     font-size:60px;
 }
 
-.heading_3 {
-    font-size:28px;
-}
-
 /*Use for the two box page*/
 .box_2.col{
     text-align:center;
@@ -93,39 +25,6 @@ span.contact {
 .support {
     margin-top:4%;
     font-size:20px;
-}
-
-.description {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    font-size: 150%;
-}
-
-/*overview*/
-body.overview {
-    background: url(../img/overview/subtle-texture.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-img#overview-image {
-    max-width:80%;
-    max-height:80%;
-    text-align:center;
-}
-
-#overview-description {
-    padding-top: 5%;
-    font-size:150%;
-    padding-bottom:5%;
-}
-
-.overview-image {
-    text-align:center;
-}
-
-.spacer{
-	height: 400px; /*also used in pricing*/
 }
 
 /* testimonials */
@@ -146,7 +45,9 @@ img#overview-image {
     padding-right: 10%;
 }
 
-
+.source{
+    padding
+}
 .name{
     font-size: 30px;
     font-style: oblique; 
@@ -160,7 +61,7 @@ img#overview-image {
 /* features */
  .slider_icons li, .slider_descriptions li{
                 display: inline;
-                font-size: 20px;                
+                font-size: 24px;                
             }
 
 
@@ -178,12 +79,12 @@ img#overview-image {
                 text-align: center;     
                 margin-left: 4%;    
                 margin-right: 4%;           
-                margin-bottom: 71px;    
+                margin-bottom: 62px;
             }
 
             .slider_icons > li > div:hover{
                 cursor: pointer;
-                border-bottom: 5px solid rgba(24, 134, 175, 1);
+                border-bottom: 5px solid rgba(24, 134, 175, .6);
             }
 
             .slider_descriptions > li > p{
@@ -227,7 +128,7 @@ img#overview-image {
     padding-top: 10px;
     font-size: 20px;
     background-color:rgba(255,255,255,0.6);
-    margin-top: -165px;
+    margin-top: -173px;
 
 }
 
@@ -352,7 +253,7 @@ img#overview-image {
 }
 
 #story > p{
-    font-size: 20px;
+    font-size: 24px;
 }
 
 a {
