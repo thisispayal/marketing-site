@@ -137,9 +137,15 @@ img#uses-image {
 }
 
 /* testimonials */
+.testimonials{
+    height: 434px;
+    overflow: hidden;
+
+}
 .bxslider_testimonials li{
                 background: black;
                 color: white;
+
             }
 
 .bxslider_testimonials img{
@@ -184,8 +190,8 @@ img#uses-image {
             .slider_icons > li > div{   
                 float: left;
                 text-align: center;     
-                margin-left: 4%;    
-                margin-right: 4%;           
+                margin-left: 4.5%;    
+                margin-right: 4.5%;           
                 margin-bottom: 71px;    
             }
 
@@ -421,6 +427,10 @@ a {
 
         .type{
             font-style: oblique;
+        }
+
+        .method a {
+            text-decoration: none;
         }
         .submit_button {
             float:right;
