@@ -141,7 +141,7 @@ the gridpak.js file to use '.page' as it's container.
     @media screen and (min-width: 920px) {
         
         .row {
-            margin-left:-12px;
+            margin-left:-5px;
         }
         .col {
             border-left-width:12px;
@@ -157,9 +157,13 @@ the gridpak.js file to use '.page' as it's container.
             ...
         }
         */
-        
-        .span_1{
-            width:8.33333333333%;
+
+        .span_point_5 {
+            width:4.1666666667%;
+        }
+
+        .span_1 {
+            width:8.3333333334%;
         }
 
          .span_1_5, .spacer {
@@ -171,11 +175,11 @@ the gridpak.js file to use '.page' as it's container.
         }
 
         .span_2_3 {
-            width: 19.444444444%;
+            width: 19.4444444444%;
         }
 
         .span_2_5{
-            width: 20.83333335%;
+            width: 20.8333333334%;
         }
 
         .span_3,
@@ -187,7 +191,7 @@ the gridpak.js file to use '.page' as it's container.
 
         .span_4,
         .media_block {
-            width:33.3333333333%;
+            width:33.3333333334%;
         }
 
         .span_5 {
@@ -201,7 +205,7 @@ the gridpak.js file to use '.page' as it's container.
 		}
 
         .span_7 {
-            width:58.3333333333%;
+            width:58.3333333334%;
         }
 
         .span_8 {
@@ -213,7 +217,7 @@ the gridpak.js file to use '.page' as it's container.
         }
         
         .span_10 {
-            width:83.3333333333%;
+            width:83.3333333334%;
         }
         
         .span_11 {
