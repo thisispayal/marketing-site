@@ -4,6 +4,70 @@
  *
  */
 
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+/** header **/
+
+.site_header {
+    width: 100%;
+    position: fixed;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(86, 86, 86, .95);
+    z-index: 10000;
+
+}
+
+.site_header a{
+    color: white;
+    text-decoration: none;
+}
+
+span.contact {
+    margin-right: 150px;
+}
+.trial_button {
+    margin-top: -10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+    background-color:#f76839;
+    display:inline-block;
+    color:#ffffff;
+    font-family:Verdana;
+    font-size:15px;
+    font-weight:bold;
+    padding:9px 14px;
+    text-decoration:none;
+    float: right;
+}.trial_button:hover {
+    background-color:#6b6b6b;
+}.trial_button:active {
+    position:relative;
+    
+}
+
+#header_img{
+    float: left;
+}
+
+.site_header ul{    
+    text-align: right;
+    margin-right: 20px;
+}
+
+.site_header ul li{
+    display: inline;
+    list-style-type: none;
+}
+
+/** overall **/
+#content{
+    padding-top: 93px;
+     overflow: scroll;
+}
+
 /*support*/
 
 /*Use for the section heading formatting*/
@@ -82,9 +146,7 @@ img#overview-image {
     padding-right: 10%;
 }
 
-.source{
-    padding
-}
+
 .name{
     font-size: 30px;
     font-style: oblique; 
@@ -98,7 +160,7 @@ img#overview-image {
 /* features */
  .slider_icons li, .slider_descriptions li{
                 display: inline;
-                font-size: 24px;                
+                font-size: 20px;                
             }
 
 
@@ -116,12 +178,12 @@ img#overview-image {
                 text-align: center;     
                 margin-left: 4%;    
                 margin-right: 4%;           
-                margin-bottom: 62px;
+                margin-bottom: 71px;    
             }
 
             .slider_icons > li > div:hover{
                 cursor: pointer;
-                border-bottom: 5px solid rgba(24, 134, 175, .6);
+                border-bottom: 5px solid rgba(24, 134, 175, 1);
             }
 
             .slider_descriptions > li > p{
@@ -165,7 +227,7 @@ img#overview-image {
     padding-top: 10px;
     font-size: 20px;
     background-color:rgba(255,255,255,0.6);
-    margin-top: -173px;
+    margin-top: -165px;
 
 }
 
@@ -211,6 +273,7 @@ img#overview-image {
     position:relative;
     
 }
+ 
 
 /** testimonials **/
 .bxslider_testimonial li{
@@ -290,7 +353,7 @@ img#overview-image {
 }
 
 #story > p{
-    font-size: 24px;
+    font-size: 20px;
 }
 
 a {
