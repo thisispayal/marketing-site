@@ -1,7 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
 		<title>Vigilant Medical &middot; ImageShare</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
@@ -21,26 +20,37 @@
         <script src="assets/js/features.js"></script>
         <script src="assets/js/header.js"></script>
 
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+
 
 	</head>
 
 	<body>		
         <div class="site_header">
-            <img src="assets/img/imageshare.png">
-            <ul>
-                <span class="contact">
-                     <li><a href="mailto:info@vigilantmedical.net">info@vigilantmedical.net</a></li>
-                <li>888-898-0012</li>
-                </span>               
+            <span id="header_img">
+                <img src="assets/img/vigilant.png" id="vigilant" alt="Vigilant Logo">
+                <img src="assets/img/imageshare.png" id="imageshare" style="display:none;" alt="Imageshare Logo">
+            </span>
+            <ul class="contact">
+                <li><a href="mailto:info@vigilantmedical.net">info@vigilantmedical.net</a></li>
+                <li>888-898-0012</li>          
             </ul>
             <ul class="nav">
-                <li>OVERVIEW | </li>
-                <li>USES | </li>
-                <li>FEATURES | </li>
-                <li>SUPPORT | </li>
-                <li>PRICING | </li>
-                <li>ABOUT US | </li>
-                <li>CONTACT</li>
+                <li id="overview_link"><a href="#overview">OVERVIEW</a></li>
+                    <li> | </li>
+                <li id="uses_link"><a href="#uses">USES</a></li>
+                    <li> | </li>
+                <li id="features_link"><a href="#features">FEATURES</a></li>
+                    <li> | </li>
+                <li id="support_link"><a href="#support">SUPPORT</a></li>
+                    <li> | </li>
+                <li id="pricing_link"><a href="#pricing">PRICING</a></li>
+                    <li> | </li>
+                <li id="about_us_link"><a href="#about_us">ABOUT US</a></li>
+                    <li> | </li>
+                <li id="contact_link"><a href="#contact">CONTACT</a></li>
                  <li><a href="#" class="trial_button">Free Trial</a></li>
             </ul>
         </div>
@@ -52,10 +62,10 @@
             </div>
         
             <!-- Testimonials -->
-            <div class="testimonials">
+            <div id="testimonials">
                 <div id="features_JS" style="display:none;">
                     <div class="row">
-                        <div class="span_12 col">
+                        <div class="span_12 col tesimonials">
                             <ul class="bxslider_testimonials">
                                 <li>
                                     <img src="assets/img/testimonial/slider/testimonial_1.png" alt="Testimonial 1">
@@ -111,17 +121,20 @@
                 </div>
             </div>
     
-            <!-- Overview -->   
+            <!-- Overview --> 
+            <a name="overview"></a>
             <div class="overview">
                             
             </div>
     
-            <!-- Uses -->   
+            <!-- Uses -->
+            <a name="uses"></a>
             <div class="uses">
                             
             </div>
         
             <!-- Features -->
+            <a name="features"></a>
             <div class="features">
                 <table class="features_slider">
                 <tr>
@@ -228,6 +241,7 @@
             </div>
     
             <!-- Support -->
+            <a name="support"></a>
             <div class="support">
                  <div class="page">
                 <div id="support">
@@ -239,14 +253,14 @@
                             &nbsp;
                         </div>
                         <div class="box_2 col">
-                            <img src="assets/img/support-stat.png">
+                            <img src="assets/img/support-stat.png" alt="support statistic">
                             <div class="span_12">
                                 <div class="heading_2">94%</div>
                             </div>
                             <div class="span_12">of our support calls are resolved</div>
                         </div>
                         <div class="box_2 col">
-                            <img src="assets/img/support-stat.png">
+                            <img src="assets/img/support-stat.png" alt="support statistic">
                             <div class="span_12">
                                 <div class="heading_2">94%</div>
                             </div>
@@ -278,6 +292,7 @@
             </div>
     
             <!-- Pricing -->
+            <a name="pricing"></a>
             <div class="pricing">
                 <div class="page">
                 <div class="row">               
@@ -362,6 +377,7 @@
             
         
             <!-- About Us -->
+            <a name="about_us"></a>
             <div class="about_us">
                 <div class="page">
                     <div class="row">               
@@ -382,9 +398,9 @@
                         <p>Our core values are</p>
                             <div class="values">
                                 <ul>
-                                    <li><img src="assets/img/about_us/simplicity.png"></li>
-                                    <li><img src="assets/img/about_us/security.png"></li>
-                                    <li><img src="assets/img/about_us/service.png"></li>
+                                    <li><img src="assets/img/about_us/simplicity.png" alt="Simplicity"></li>
+                                    <li><img src="assets/img/about_us/security.png" alt="Security"></li>
+                                    <li><img src="assets/img/about_us/service.png" alt="Service"></li>
                                 </ul>
                         </div>
     
@@ -407,6 +423,7 @@
             </div>
     
             <!-- Contact -->
+            <a name="contact"></a>
             <div class="contact">
                 
             </div>

@@ -4,6 +4,9 @@
  *
  */
 
+body{
+    font-family: 'Open Sans', sans-serif;
+}
 /** header **/
 
 .site_header {
@@ -12,7 +15,13 @@
     color: white;
     font-size: 20px;
     background-color: rgba(86, 86, 86, .95);
-    z-index: 9999;
+    z-index: 10000;
+
+}
+
+.site_header a{
+    color: white;
+    text-decoration: none;
 }
 
 span.contact {
@@ -39,7 +48,7 @@ span.contact {
     
 }
 
-.site_header img{
+#header_img{
     float: left;
 }
 
@@ -100,9 +109,7 @@ span.contact {
     padding-right: 10%;
 }
 
-.source{
-    padding
-}
+
 .name{
     font-size: 30px;
     font-style: oblique; 
@@ -116,7 +123,7 @@ span.contact {
 /* features */
  .slider_icons li, .slider_descriptions li{
                 display: inline;
-                font-size: 24px;                
+                font-size: 20px;                
             }
 
 
@@ -134,12 +141,12 @@ span.contact {
                 text-align: center;     
                 margin-left: 4%;    
                 margin-right: 4%;           
-                margin-bottom: 62px;
+                margin-bottom: 71px;    
             }
 
             .slider_icons > li > div:hover{
                 cursor: pointer;
-                border-bottom: 5px solid rgba(24, 134, 175, .6);
+                border-bottom: 5px solid rgba(24, 134, 175, 1);
             }
 
             .slider_descriptions > li > p{
@@ -183,7 +190,7 @@ span.contact {
     padding-top: 10px;
     font-size: 20px;
     background-color:rgba(255,255,255,0.6);
-    margin-top: -173px;
+    margin-top: -165px;
 
 }
 
@@ -308,7 +315,7 @@ span.contact {
 }
 
 #story > p{
-    font-size: 24px;
+    font-size: 20px;
 }
 
 a {

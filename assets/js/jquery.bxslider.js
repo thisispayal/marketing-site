@@ -27,7 +27,7 @@
 		captions: false,
 		ticker: false,
 		tickerHover: false,
-		adaptiveHeight: false,
+		adaptiveHeight: true,
 		adaptiveHeightSpeed: 500,
 		video: false,
 		useCSS: true,
@@ -103,7 +103,7 @@
 		 * Makes slideshow responsive
 		 */
 		// first get the original window dimens (thanks alot IE)
-		var windowWidth = $(window).width();
+		var windowWidth = $(window).width() - 100;
 		var windowHeight = $(window).height();
 
 		

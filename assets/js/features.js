@@ -25,7 +25,7 @@ $(document).ready(function(){
                 $('.features_slider').on('mouseenter mouseleave', function( e ){
                     var onMouEnt = e.type=='mouseenter' ? clearInterval(intv) : auto() ;
                 });
-
+                
 
                 function scroll(direction){                 
                     var icons_list = $(".slider_icons");
