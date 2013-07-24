@@ -102,7 +102,7 @@ span.contact {
 }
 
 /*uses*/
-body.uses {
+.uses {
    /* background: url(../img/uses/subtle-texture.png); */
     background-size: 100%;
     background-repeat: no-repeat;
@@ -202,7 +202,7 @@ img#uses-image {
 /** pricing **/
 
 .pricing{
-    background: url(../img/pricing/background.jpg);
+    /*background: url(../img/pricing/background.jpg);*/
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -315,7 +315,7 @@ img#uses-image {
 
 /** about us **/
 .about_us{
-    background: url(../img/about_us/background.jpg);
+   /* background: url(../img/about_us/background.jpg);*/
     background-size: 100%;
     background-repeat: no-repeat;
 }
