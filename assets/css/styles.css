@@ -359,3 +359,44 @@ img#overview-image {
 a {
     color: #f76839;
 }
+
+/** contact **/
+  
+        .header_black{
+            text-align: center;
+            font-size: 100px;
+            color: black;
+        }
+
+        .message{
+            font-style: oblique;
+            font-size: 24px;
+            text-align: right;
+        }
+
+        #disclaimer{
+            font-size: 12px;
+        }
+    
+
+        .inputs{
+            float:right;
+            margin-right: 100px;
+        }
+
+        .inputs input[type="text"]{
+            font-size: 24px;
+        }
+
+        .contact_box ul {
+            list-style-type: none;
+        }
+
+        .contact_methods ul{
+            margin-bottom: 35px;
+            font-size: 24px;
+        }
+
+        .type{
+            font-style: italic;
+        }
