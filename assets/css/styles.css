@@ -75,6 +75,7 @@ span.contact {
     padding-left:20px;
     font-size:70px;
 }
+
 /*Use for the most important information under the section heading*/
 .heading_2 {
     font-size:60px;
@@ -99,6 +100,32 @@ span.contact {
     padding-top: 2%;
     padding-bottom: 2%;
     font-size: 150%;
+}
+
+/*overview*/
+.overview-heading { /* this should be eventually put into a consistent <h2> css section. just testing some styles out*/
+    margin-top: 2%;
+    font-size:300%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.section-subheading {
+    font-size: 230%;
+    margin-bottom: 5%;
+    color: rgb(212,82,52);
+    text-align:center;
+}
+
+.section-subbody {
+    font-size: 120%;
+    margin-bottom: 5%;
+    text-align:center;
+}
+
+hr.overview {
+    border-color: rgba(24,134,175,.3);
+    margin-bottom: 5%;
 }
 
 /*uses*/
