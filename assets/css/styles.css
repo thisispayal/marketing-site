@@ -219,11 +219,11 @@ img#uses-image {
 
 /** pricing **/
 
-.pricing{
+/*.pricing{
     background: url(../img/pricing/background_optimized.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-}
+}*/
 
 .pricing_option{
     text-align: center;
@@ -335,12 +335,12 @@ img#uses-image {
             }
 
 /** about us **/
-.about_us{
+/*.about_us{
     background: url(../img/about_us/background_optimized.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
 }
-
+*/
 .header{
     text-align: center;
     font-size: 100px;
