@@ -1,22 +1,25 @@
 var set = null;
-
+var header_image = null;
 $(window).scroll( function() {
    var value = $(this).scrollTop();
-   
-//    if (value > 120){
-//    		$('#vigilant').hide();
-//    		$('#imageshare').show();
-//    }
 
-//    else{
-//    	$('#imageshare').hide();
-//    	$('#vigilant').show();
-//    }
+if (value > 120 && header_image != "imageshare"){
+	header_image = "imageshare";
+		$('#vigilant').hide();
+		$('#imageshare').show();
+}
+
+else if (value < 120 && header_image != "vigilant"){
+	header_image = "vigilant";
+	$('#imageshare').hide();
+	$('#vigilant').show();
+}
 
 	function setHash(value){
+		set = value;
 		var r=value;
 			if(navigator.userAgent.indexOf('Chrome/')!=-1){
- 			top.history.pushState("", "", r);
+ 			top.history.pushState("", "", "#" + r);
  			return;
 				};
 		if(r.charAt(0)=='/'){
@@ -33,35 +36,33 @@ $(window).scroll( function() {
    		unSelect();
    	}
     if (value > 404 && value <= 1361 && set != "uses"){ 
-    	set = "uses";
-    	setHash("#uses");
+    	setHash("uses");
    		unSelect();
    		$('#uses_link').css('border-bottom', '5px solid white')   
    		
 	}
 	 if (value > 1361 && value <= 1931 & set!= "features"){  
-	 	set = "features";
-	 	setHash("#features");	
+	 	setHash("features");	
    		unSelect();
    		$('#features_link').css('border-bottom', '5px solid white')   		
 	}
 	if (value > 1931 && value <= 2785 & set != "support"){
-		set = "support";
+		setHash("support");
 		unSelect();
 		$('#support_link').css('border-bottom', '5px solid white')
 	}
 	if (value > 2785 && value <= 3668 && set != "pricing"){
-		set = "pricing;"
+		setHash("pricing");
 		unSelect();
 		$('#pricing_link').css('border-bottom', '5px solid white')
 	}
 	if (value > 3668 && value <= 4440 && set != "about_us"){
-		set = "about_us";
+		setHash("about_us");
 		unSelect();
 		$('#about_us_link').css('border-bottom', '5px solid white')
 	}
 	if (value > 4440 && set != "contact"){
-		set = "contact";
+		setHash("contact");
 		unSelect();
 		$('#contact_link').css('border-bottom', '5px solid white')
 	}

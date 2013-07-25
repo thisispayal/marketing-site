@@ -80,6 +80,14 @@ span.contact {
      overflow: scroll;
 }
 
+.landing_page{ 
+    background: url(../img/background.jpg);
+    margin-top: -250px;
+    height: 1300px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
 /*support*/
 
 /*Use for the section heading formatting*/
@@ -142,9 +150,10 @@ img#uses-image {
 
 /* testimonials */
 .testimonials{
-    height: 434px;
+    margin-top: -45px;
+    height: 400px;
     overflow: hidden;
-
+    background-color: #000;
 }
 .bxslider_testimonials li{
                 background: black;
@@ -224,6 +233,8 @@ img#uses-image {
     background-size: 100%;
     background-repeat: no-repeat;
 }*/
+
+
 
 .pricing_option{
     text-align: center;
