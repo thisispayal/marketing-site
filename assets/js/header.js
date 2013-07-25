@@ -16,7 +16,7 @@ $(window).scroll( function() {
 	function setHash(value){
 		var r=value;
 			if(navigator.userAgent.indexOf('Chrome/')!=-1){
- 			top.history.pushState("", "", r);
+ 			top.history.pushState("", "", #r);
  			return;
 				};
 		if(r.charAt(0)=='/'){
