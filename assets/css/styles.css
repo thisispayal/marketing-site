@@ -70,10 +70,22 @@ span.contact {
     list-style-type: none;
 }
 
+.header_spacer{
+    height: 125px;
+    width: 100%;
+}
 /** overall **/
 #content{
     padding-top: 110px;
      overflow: scroll;
+}
+
+.landing_page{ 
+    background: url(../img/background.jpg);
+    margin-top: -250px;
+    height: 1300px;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 /*support*/
@@ -137,9 +149,16 @@ img#uses-image {
 }
 
 /* testimonials */
+.testimonials{
+    margin-top: -45px;
+    height: 400px;
+    overflow: hidden;
+    background-color: #000;
+}
 .bxslider_testimonials li{
                 background: black;
                 color: white;
+
             }
 
 .bxslider_testimonials img{
@@ -184,8 +203,8 @@ img#uses-image {
             .slider_icons > li > div{   
                 float: left;
                 text-align: center;     
-                margin-left: 4%;    
-                margin-right: 4%;           
+                margin-left: 4.5%;    
+                margin-right: 4.5%;           
                 margin-bottom: 71px;    
             }
 
@@ -209,11 +228,13 @@ img#uses-image {
 
 /** pricing **/
 
-.pricing{
+/*.pricing{
     background: url(../img/pricing/background_optimized.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-}
+}*/
+
+
 
 .pricing_option{
     text-align: center;
@@ -325,12 +346,12 @@ img#uses-image {
             }
 
 /** about us **/
-.about_us{
+/*.about_us{
     background: url(../img/about_us/background_optimized.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
 }
-
+*/
 .header{
     text-align: center;
     font-size: 100px;
@@ -421,6 +442,10 @@ a {
 
         .type{
             font-style: oblique;
+        }
+
+        .method a {
+            text-decoration: none;
         }
         .submit_button {
             float:right;

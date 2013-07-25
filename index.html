@@ -18,6 +18,7 @@
 		<script src="assets/js/testimonials.js"></script>
         <script src="assets/js/features.js"></script>
         <script src="assets/js/header.js"></script>
+        <script src="assets/js/smooth_scroll.js"></script>
 
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:700italic,400,700' rel='stylesheet' type='text/css'>
@@ -37,19 +38,19 @@
                 <li id="header_phone">888-898-0012</li>          
             </ul>
             <ul class="nav">
-                <li id="overview_link"><a href="#overview">OVERVIEW</a></li>
+                <li id="overview_link"><a href="#overview" class="anchor_link">OVERVIEW</a></li>
                     <li> | </li>
-                <li id="uses_link"><a href="#uses">USES</a></li>
+                <li id="uses_link"><a href="#uses" class="anchor_link">USES</a></li>
                     <li> | </li>
-                <li id="features_link"><a href="#features">FEATURES</a></li>
+                <li id="features_link"><a href="#features" class="anchor_link">FEATURES</a></li>
                     <li> | </li>
-                <li id="support_link"><a href="#support">SUPPORT</a></li>
+                <li id="support_link"><a href="#support" class="anchor_link">SUPPORT</a></li>
                     <li> | </li>
-                <li id="pricing_link"><a href="#pricing">PRICING</a></li>
+                <li id="pricing_link"><a href="#pricing" class="anchor_link">PRICING</a></li>
                     <li> | </li>
-                <li id="about_us_link"><a href="#about_us">ABOUT US</a></li>
+                <li id="about_us_link"><a href="#about_us" class="anchor_link">ABOUT US</a></li>
                     <li> | </li>
-                <li id="contact_link"><a href="#contact">CONTACT</a></li>
+                <li id="contact_link"><a href="#contact" class="anchor_link">CONTACT</a></li>
                  <li><a href="#" class="trial_button">Free Trial</a></li>
             </ul>
         </div>
@@ -57,11 +58,11 @@
         <div id="content">
             <!-- Landing Page -->
             <div class="landing_page">
-                            
+                &nbsp;
             </div> 
         
             <!-- Testimonials -->
-            <div id="testimonials">
+            <div class="testimonials">
                 <div id="features_JS" style="display:none;">
                     <div class="row">
                         <div class="span_12 col tesimonials">
@@ -121,19 +122,101 @@
             </div>
     
             <!-- Overview --> 
-            <a name="overview"></a>
+            <a name="overview" id="uses"></a>
             <div class="overview">
                             
             </div>
     
             <!-- Uses -->
-            <a name="uses"></a>
+            <a name="uses" id="uses"></a>
+           
             <div class="uses">
-                            
+                   
+                <div class="page">
+        <div id="uses">
+            <div class="row">
+                <span class="section-heading">Uses</span>
+            </div>
+
+            <div class="row">
+                <div class="span_3 col">
+                    &nbsp;
+                </div>
+                <div class="span_6 col">
+                    <img id="uses-image" src="assets/img/uses/placeholder-uses.png" />
+                </div>
+                <div class="span_3">
+                    &nbsp;
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span_1 col">
+                    &nbsp;
+                </div>
+                <div id="uses-description" class="span_10 col">
+                    Using ImageShare, one person can anonymously upload an image securely to another person, 
+                        who can then log into ImageShare to view images, such a long long sentence and so much space.
+                        So much space. so much.
+                </div>
+                <div class="span_1">
+                   &nbsp;
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span_1 col">
+                    &nbsp;
+                </div>
+                <div class="span_3 col">
+                    <div class="uses-subdivisions second_opinion">
+                        <div class="row"><img src="assets/img/uses/referrals-2.png" height="150" /></div>
+                        <div class="row heading_3">Second Opinion</div>
+                        <div class="row uses-subdescriptions">
+                                For referrals, a physician or patient can send an image to a consulting 
+                            physician using ImageShare. The consulting physician can review the image. Extra 
+                            sentence.
+                            </div>
+                    </div>
+                </div>
+
+                <div class="span_point_5 col">&nbsp;</div>
+                
+                <div class="span_3 col">
+                    <div class="uses-subdivisions quality_assurance">
+                        <div class="row"><img src="assets/img/uses/quality_assurance.png" height="150"/></div>
+                        <div class="row heading_3">Quality Assurance</div>
+                        <div class="row uses-subdescriptions">
+                            A hospital sends cases to a Quality Assurance administrator, who distributes
+                            the cases to reviewers. Reviewers view cases online in ImageShare and complete reports.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="span_point_5 col">&nbsp;</div>
+                
+                <div class="span_3 col">
+                    <div class="uses-subdivisions trials">
+                        <div class="row"><img src="assets/img/uses/clinicaltrial-micro.png" height="150" /></div>
+                         <div class="row heading_3">Clinical trials</div>
+                         <div class="row uses-subdescriptions">
+                            The research site can upload cases using ImageShare. An administrator can send 
+                            the images to a proctor, who then reviews the image using ImageShare. Extra sentence.
+                         </div>
+                    </div>
+                </div>
+                <div class="span_1 col">
+                    &nbsp;
+                </div>
+            </div>
+
+        </div>
+    </div>
             </div>
         
             <!-- Features -->
-            <a name="features"></a>
+            <a name="features" id="features"></a>
+             <div class="header_spacer">&nbsp;</div>
             <div class="features">
                 <table class="features_slider">
                 <tr>
@@ -175,19 +258,19 @@
                             <li>
                                 <div>
                                     <img src="assets/img/features/download.png" alt="Download">
-                                    <p>Download CD</p>
+                                    <p>Download CD Images</p>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <img src="assets/img/features/pacs.png" alt="PACS">
-                                    <p>PACS</p>
+                                    <p>PACS Integration</p>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <img src="assets/img/features/placeholder.png" alt="Placeholder">
-                                    <p>Placerholder</p>
+                                    <p>Placerholder Text</p>
                                 </div>
                             </li>
                         </ul>
@@ -240,7 +323,8 @@
             </div>
     
             <!-- Support -->
-            <a name="support"></a>
+            <a name="support" id="support"></a>
+             
             <div class="support">
                  <div class="page">
                 <div id="support">
@@ -291,11 +375,11 @@
             </div>
     
             <!-- Pricing -->
-            <a name="pricing"></a>
+            <a name="pricing" id="pricing"></a>
             <div class="pricing">
                 <div class="page">
                 <div class="row">               
-                    <div class="span_12 col header">
+                    <div class="span_12 col header_black">
                         Pricing Options
                     </div>                 
                 </div>
@@ -376,11 +460,11 @@
             
         
             <!-- About Us -->
-            <a name="about_us"></a>
+            <a name="about_us" id="about_us"></a>
             <div class="about_us">
                 <div class="page">
                     <div class="row">               
-                        <div class="span_12 col header">
+                        <div class="span_12 col header_black">
                             About Us
                         </div>                 
                     </div>
@@ -422,7 +506,7 @@
             </div>
     
             <!-- Contact -->
-            <a name="contact"></a>
+            <a name="contact" id="contact"></a>
             <div class="contact">
             <div class="page">
              <div class="row">               
@@ -430,7 +514,7 @@
                     Contact
                 </div>                 
             </div>
-           
+
             <div class="row">
                 <div class="span_1 col">
                     &nbsp;
@@ -463,7 +547,7 @@
                         <li>
                             <ul class="technical">
                                 <li class="type">Technical Support</li>
-                                <li class="method">tech@vigilantmedical.net</li>
+                                <li class="method"><a href="mailto:tech@vigilantmedical.net">tech@vigilantmedical.net</a></li>
                                 <li class="method">410-800-4842</li>
                             </ul>
                         </li>
