@@ -13,12 +13,12 @@ $(document).ready(function(){
                     scroll("prev");
                 })
 
-                // function auto(){
-                //     intv = setInterval(function() {
-                //         scroll("next");
-                //     }, 4000 );       
-                // }
-                // auto(); // to start immediately auto-slide
+                function auto(){
+                    intv = setInterval(function() {
+                        scroll("next");
+                    }, 4000 );       
+                }
+                auto(); // to start immediately auto-slide
 
                 // PAUSE ON MOUSEOVER
                 
