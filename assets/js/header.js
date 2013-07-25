@@ -14,7 +14,6 @@ $(window).scroll( function() {
 //    }
 
 	function setHash(value){
-		set = value;
 		var r=value;
 			if(navigator.userAgent.indexOf('Chrome/')!=-1){
  			top.history.pushState("", "", r);
@@ -34,13 +33,15 @@ $(window).scroll( function() {
    		unSelect();
    	}
     if (value > 404 && value <= 1361 && set != "uses"){ 
-    	setHash("uses");
+    	set = "uses";
+    	setHash("#uses");
    		unSelect();
    		$('#uses_link').css('border-bottom', '5px solid white')   
    		
 	}
 	 if (value > 1361 && value <= 1931 & set!= "features"){  
-	 	setHash("features");	
+	 	set = "features";
+	 	setHash("#features");	
    		unSelect();
    		$('#features_link').css('border-bottom', '5px solid white')   		
 	}
