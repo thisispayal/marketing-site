@@ -32,6 +32,7 @@
 .bx-wrapper .bx-viewport {
 
 	left: -5px;
+	
 }
 
 .bx-wrapper .bx-pager,
@@ -80,7 +81,9 @@
 	height: 10px;
 	margin: 0 5px;
 	outline: 0;
-	
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
@@ -183,7 +186,7 @@
 }
 
 .bx-wrapper .bx-caption span {
-	color: #000;
+	color: #fff;
 	font-family: Arial;
 	display: block;
 	font-size: .85em;
