@@ -1,0 +1,8 @@
+Features Icon Sizes (by width):
+
+1080: 270px
+1680: 231px
+1440: 194px
+1366: 183px
+1280: 168px
+1024: 128px

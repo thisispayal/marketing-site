@@ -1,0 +1,48 @@
+.about_us{
+	background: url(../img/about_us/background.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.header{
+	text-align: center;
+	font-size: 100px;
+	color: white;
+}
+
+
+.vertical_spacer{
+	margin-top: 60px;
+}
+
+.text_box {
+	background-color:rgba(255,255,255,0.8);
+		height: 660px;
+}
+
+.text_box > p {
+	font-size: 30px;
+
+}
+
+.values ul {
+	list-style-type: none;
+}
+
+.values ul > li {
+	margin-left: 40px;
+	margin-right: 40px;
+	display: inline;
+}
+
+.values img {
+	width: 100px;
+}
+
+#story > p{
+	font-size: 24px;
+}
+
+a {
+	color: #f76839;
+}
