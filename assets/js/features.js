@@ -8,7 +8,6 @@ $(document).ready(function(){
                     scroll("next");
                 })
 
-
                 $("#prev").click(function(){
                     scroll("prev");
                 })
