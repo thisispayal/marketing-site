@@ -58,6 +58,15 @@ a{
     overflow: scroll;
 }
 
+.opaque{
+    background-color:rgba(255,255,255);
+    background-color:rgba(255,255,255,0.6);
+}
+
+ul {
+    list-style-type: none;
+}
+
 
 /* Site Header
 =========================================== */
@@ -107,6 +116,7 @@ a{
 =========================================== */   
 .landing_page{ 
     background: url(../img/background.jpg);
+    margin-top: -200px;
     height: 1300px;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -153,7 +163,7 @@ a{
 /* Uses
 =========================================== */
 body.uses {
- /* background: url(../img/uses/subtle-texture.png); */
+/*  background: url(../img/uses/subtle-texture.png); */
  background-size: 100%;
  background-repeat: no-repeat;
 }
@@ -191,8 +201,14 @@ img#uses-image {
     border-bottom: 5px solid rgba(24, 134, 175, .6);
 }
 
+.slider_icons > li > div:hover{
+    cursor: pointer;
+    border-bottom: 5px solid rgba(24, 134, 175);
+    border-bottom: 5px solid rgba(24, 134, 175, 1);
+}
+
 .slider_icons > li > div > img{
-    width: 160px;
+    width: 240px;
 }
 
 .slider_icons > li > div{   
@@ -203,19 +219,13 @@ img#uses-image {
     margin-bottom: 71px;    
 }
 
-.slider_icons > li > div:hover{
-    cursor: pointer;
-    border-bottom: 5px solid rgba(24, 134, 175);
-    border-bottom: 5px solid rgba(24, 134, 175, 1);
-}
-
 .slider_descriptions > li > p{
     text-align: center;
 }
 
 .slider_icons{
     text-align: center;
-    margin-bottom: 250px;
+    overflow: hidden;
 }
 
 #next, #prev{
@@ -256,11 +266,11 @@ img#uses-image {
 
 /* Pricing
 =========================================== */
-.pricing{
+/*.pricing{
     background: url(../img/pricing/background_optimized.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-}
+}*/
 
 .pricing_option{
     text-align: center;
@@ -281,15 +291,9 @@ img#uses-image {
 .pricing_details{
     padding-top: 10px;
     font-size: 20px;
-    background-color:rgba(255,255,255);
-    background-color:rgba(255,255,255,0.6);
     margin-top: -165px;
     padding-right: 20px;
     margin-bottom: 100px;
-}
-
-.pricing_details > ul {
-    list-style-type: none;
 }
 
 .pricing_details > ul > li {
@@ -319,31 +323,17 @@ img#uses-image {
 .contact_button {
     margin-right: 25px;
     background-color:#3085af;
-    display:inline-block;
-    color:#ffffff;
-    font-family:Verdana;
-    font-size:15px;
-    font-weight:bold;
-    padding:9px 14px;
-    text-decoration:none;
-    float: right;
     }
-.contact_button:hover {
-    background-color:#6b6b6b;
-}
-.contact_button:active {
-    position:relative;
-}
 
 
 /* About Us
 =========================================== */
-.about_us{
+/*.about_us{
     background: url(../img/about_us/background_optimized.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
 }
-
+*/
 .header{
     text-align: center;
     font-size: 100px;
@@ -356,18 +346,12 @@ img#uses-image {
 }
 
 .text_box {
-    background-color:rgba(255,255,255);
-    background-color:rgba(255,255,255,0.8);
     height: 660px;
     margin-bottom: 100px;
 }
 
 .text_box > p {
     font-size: 30px;
-}
-
-.values ul {
-    list-style-type: none;
 }
 
 .values ul > li {
@@ -421,10 +405,6 @@ img#uses-image {
     height: 100px;
 }
 
-.contact_box ul {
-    list-style-type: none;
-}
-
 .contact_methods ul{
     margin-bottom: 35px;
     font-size: 24px;
@@ -434,25 +414,7 @@ img#uses-image {
     font-style: oblique;
 }
 
-.method a {
-    text-decoration: none;
-}
-
 .submit_button {
     float:right;
     background-color:#f76839;
-    display:inline-block;
-    color:#ffffff;
-    font-family:Verdana;
-    font-size:15px;
-    font-weight:bold;
-    padding:9px 14px;
-    text-decoration:none;
-}
-.trial_button:hover { 
-    background-color:#6b6b6b;
-}
-
-.trial_button:active {
-    position:relative;
 }

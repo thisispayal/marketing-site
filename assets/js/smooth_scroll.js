@@ -1,6 +1,10 @@
+var scrolling = false;
+
 $(document).ready(function(){
-    
+  
   $("a.anchor_link").anchorAnimate()
+
+ 
 });
 
 jQuery.fn.anchorAnimate = function(settings) {
@@ -15,10 +19,11 @@ jQuery.fn.anchorAnimate = function(settings) {
       event.preventDefault()
       var locationHref = window.location.href
       var elementClick = $(caller).attr("href")
-      
+      scrolling = true;
       var destination = $(elementClick).offset().top;
       $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination}, settings.speed, function() {
         window.location.hash = elementClick
+         scrolling = false;
       });
         return false;
     })
