@@ -133,8 +133,8 @@ ul {
 }
 
 .bxslider_testimonials li{
-    background: black;
-    color: white;
+    background: #000;
+    color: #fff;
 }
 
 .bxslider_testimonials img{
@@ -235,7 +235,7 @@ img#uses-image {
 /* Support
 =========================================== */
 /*Use for the section heading formatting*/
-.section-heading {
+.section_heading {
     padding-left:20px;
     font-size:70px;
 }
@@ -279,13 +279,6 @@ img#uses-image {
     padding-top: 60px;
     padding-bottom: 60px;
     font-size: 50px;
-}
-
-.header{
-    margin-top: 10px;
-    text-align: center;
-    font-size: 100px;
-    color: white;
 }
 
 .pricing_details{
@@ -334,12 +327,6 @@ img#uses-image {
     background-repeat: no-repeat;
 }
 */
-.header{
-    text-align: center;
-    font-size: 100px;
-    color: white;
-}
-
 
 .vertical_spacer{
     margin-top: 60px;
