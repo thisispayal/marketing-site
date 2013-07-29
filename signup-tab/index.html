@@ -10,15 +10,106 @@
         <!-- CSS -->
         <link rel="stylesheet" media="all" type="text/css" href="../assets/css/gridpak.css" />
         <link rel="stylesheet" media="all" type="text/css" href="../assets/css/styles.css" />
-        <link rel="stylesheet" media="all" type="text/css" href="tabzilla.css" />    
+        
+        <style>
+            .spacer {
+                padding: 150px;
+            }
+
+            .container {
+                position:absolute;
+                bottom:-1px;
+                height: 35px; 
+                overflow: hidden
+            }
+
+            .toggle {
+                height:20px;
+                cursor: pointer;
+                background-color: rgb(213,78,39); 
+                color:white;
+                padding: 10px 40px 10px 40px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border:1px solid rgb(178, 65, 27); 
+            }
+
+            .content {
+                background-color:rgba(211,211,211,.4);
+                height:200px;
+                overflow:hidden;
+                padding: 10px 40px 10px 40px;
+            }
+
+            .main {
+                background-color:#eee;
+            }
+
+            input {
+                height:20px;
+                width:230px;
+                margin-bottom:5px;
+            }
+
+            .button-style {
+                padding: 4px 16px 4px 16px;
+                color:white;
+                background-color:rgb(213,78,39);
+                float:right;
+                border:1px solid rgb(178, 65, 27); 
+            }
+
+            .microcopy {
+                font-size: 10px;
+            }
+
+            .open > #signup-arrow {
+                -webkit-transform: rotate(180deg);
+            }
+
+        </style>    
     </head>
     
-    <body>
-        <div class="page">
-            <a href="https://www.mozilla.org/" id="tabzilla">mozilla</a>
+<body>
+    <div class="page">
+
+        <div class="main">
+            <div>lorem ipsum</div>
+            <div>lorem ipsum</div>
         </div>
-  
-    </body>
+        
+        <div class="signup-tab">
+            <div class="spacer"></div>
+            <div style="" class="container">
+                <div class="toggle closed">Sign up for more information &nbsp; <img src="../assets/img/signup-arrow.png" width="25"/ id="signup-arrow"> </div>
+                <div class="content">
+                    <input type="text" placeholder="Name" />
+                    <br />
+                    <input type="text" placeholder="Email" />
+                    <p class="microcopy">Don't worry, we dislike spam as much as you do. <br />A Vigilant representative will be in touch shortly.</p>
+                    <div class="submit"><span class="button-style">Submit</span></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
     <script src="../assets/js/jquery-1.10.2.js"></script>
-    <script src="tabzilla.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".signup-tab").on("click", ".toggle.closed", function(){
+                $(".container").animate({ height: '205px' }, 600);
+                $(".toggle").removeClass("closed").addClass("open");
+            });
+
+            $(".signup-tab").on("click", ".toggle.open", function(){
+                $(".container").animate({ height: '35px' }, 400);
+                $(".toggle").removeClass("open").addClass("closed");
+            });
+
+        });
+    </script>
+
 </html>
