@@ -10,15 +10,76 @@
         <!-- CSS -->
         <link rel="stylesheet" media="all" type="text/css" href="../assets/css/gridpak.css" />
         <link rel="stylesheet" media="all" type="text/css" href="../assets/css/styles.css" />
-        <link rel="stylesheet" media="all" type="text/css" href="tabzilla-vigilant.css" />    
+        
+        <style>
+            .spacer {
+                padding: 150px;
+            }
+
+            .container {
+                position:absolute;
+                bottom:-1px;
+            }
+
+            .toggle {
+                height:20px;
+                cursor: pointer;
+                background-color: black;
+                padding: 10px 40px 10px 40px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+            .content {
+                background-color:rgba(211,211,211,.4);
+                height:200px;
+                overflow:hidden;
+                padding: 10px 40px 10px 40px;
+            }
+
+            .main {
+                background-color:#eee;
+            }
+
+        </style>    
     </head>
     
-    <body>
-        <div class="page">
-            <a href="https://www.mozilla.org/" id="tabzilla">mozilla</a>
+<body>
+    <div class="page">
+
+        <div class="main">
+            <div>lorem ipsum</div>
+            <div>lorem ipsum</div>
         </div>
-  
-    </body>
+        
+        <div style="width: 100%">
+            <div class="spacer"></div>
+            <div style="height: 20px; overflow: hidden" class="container closed">
+                <div class="toggle" style="background-color: darkorange;">Sign up for more information</div>
+                <div class="content">
+                    <input type="text" placeholder="Name" />
+                    <br />
+                    <input type="text" placeholder="Email" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
     <script src="../assets/js/jquery-1.10.2.js"></script>
-    <script src="tabzilla-vigilant.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".container.closed").click(function(){
+                $(".container").animate({ height: '205px' }, 500);
+                $(".container").removeClass("closed").addClass("open");
+            });
+            $(".container.open").click(function(){
+                $(".container").animate({ height: '15px' }, 500);
+                $(".container").removeClass("open").addClass("closed");
+            });
+        });
+    </script>
+
 </html>
