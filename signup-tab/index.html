@@ -19,15 +19,19 @@
             .container {
                 position:absolute;
                 bottom:-1px;
+                height: 35px; 
+                overflow: hidden
             }
 
             .toggle {
                 height:20px;
                 cursor: pointer;
-                background-color: black;
+                background-color: rgb(213,78,39); 
+                color:white;
                 padding: 10px 40px 10px 40px;
                 border-top-left-radius: 10px;
                 border-top-right-radius: 10px;
+                border:1px solid rgb(178, 65, 27); 
             }
 
             .content {
@@ -41,6 +45,28 @@
                 background-color:#eee;
             }
 
+            input {
+                height:20px;
+                width:230px;
+                margin-bottom:5px;
+            }
+
+            .button-style {
+                padding: 4px 16px 4px 16px;
+                color:white;
+                background-color:rgb(213,78,39);
+                float:right;
+                border:1px solid rgb(178, 65, 27); 
+            }
+
+            .microcopy {
+                font-size: 10px;
+            }
+
+            .open > #signup-arrow {
+                -webkit-transform: rotate(180deg);
+            }
+
         </style>    
     </head>
     
@@ -52,14 +78,16 @@
             <div>lorem ipsum</div>
         </div>
         
-        <div style="width: 100%">
+        <div class="signup-tab">
             <div class="spacer"></div>
-            <div style="height: 20px; overflow: hidden" class="container closed">
-                <div class="toggle" style="background-color: darkorange;">Sign up for more information</div>
+            <div style="" class="container">
+                <div class="toggle closed">Sign up for more information &nbsp; <img src="../assets/img/signup-arrow.png" width="25"/ id="signup-arrow"> </div>
                 <div class="content">
                     <input type="text" placeholder="Name" />
                     <br />
                     <input type="text" placeholder="Email" />
+                    <p class="microcopy">Don't worry, we dislike spam as much as you do. <br />A Vigilant representative will be in touch shortly.</p>
+                    <div class="submit"><span class="button-style">Submit</span></div>
                 </div>
             </div>
 
@@ -71,14 +99,16 @@
 
     <script>
         $(document).ready(function(){
-            $(".container.closed").click(function(){
-                $(".container").animate({ height: '205px' }, 500);
-                $(".container").removeClass("closed").addClass("open");
+            $(".signup-tab").on("click", ".toggle.closed", function(){
+                $(".container").animate({ height: '205px' }, 600);
+                $(".toggle").removeClass("closed").addClass("open");
             });
-            $(".container.open").click(function(){
-                $(".container").animate({ height: '15px' }, 500);
-                $(".container").removeClass("open").addClass("closed");
+
+            $(".signup-tab").on("click", ".toggle.open", function(){
+                $(".container").animate({ height: '35px' }, 400);
+                $(".toggle").removeClass("open").addClass("closed");
             });
+
         });
     </script>
 
