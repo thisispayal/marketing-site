@@ -1,10 +1,27 @@
-var set = null;
+var set = "home";
 var header_image = null;
 var last = null;
+    
+
+$(document).ready(function() {
+	landing = $('.landing_page').height() + $('.testimonials').height() - 300
+	uses = landing + $('.uses').height()
+	features = uses + $('.features').height()
+	support = features + $('.support').height()
+	pricing = support + $('.pricing').height()
+	about_us = pricing + $('.about_us').height()
+	contact = about_us + $('contact').height()
+
+
+	set = "landing";
+	last = "landing";
+	
+});
+ 
+
 
 $(window).scroll( function() {
    var value = $(this).scrollTop();
-
 if (value > 120 && header_image != "imageshare"){
 	header_image = "imageshare";
 		$('#vigilant').hide();
@@ -32,38 +49,34 @@ else if (value < 120 && header_image != "vigilant"){
 		};
 
 	}
-
-   	if (value < 1385){
-   		set = null;
-   		unSelect();
-   	}
-    if (value >= 1385 && value < 2365 && set != "uses" && scrolling == false){ 
+  
+    if (value >= landing && value < uses && set != "uses" && scrolling == false){ 
     	setHash("uses");
    		unSelect();
    		$('#uses_link').css('border-bottom', '5px solid white')   
    		
 	}
-	 if (value >= 2365 && value < 3003 & set!= "features" && scrolling == false){  
+	 if (value >= uses && value < features & set!= "features" && scrolling == false){  
 	 	setHash("features");	
    		unSelect();
    		$('#features_link').css('border-bottom', '5px solid white')   		
 	}
-	if (value >= 3003 && value < 3870 & set != "support" && scrolling == false){
+	if (value >= features && value < support & set != "support" && scrolling == false){
 		setHash("support");
 		unSelect();
 		$('#support_link').css('border-bottom', '5px solid white')
 	}
-	if (value >= 3870 && value < 4739 && set != "pricing" && scrolling == false){
+	if (value >= support && value < pricing && set != "pricing" && scrolling == false){
 		setHash("pricing");
 		unSelect();
 		$('#pricing_link').css('border-bottom', '5px solid white')
 	}
-	if (value >= 4739 && value < 5305 && set != "about_us" && scrolling == false){
+	if (value >= pricing && value < about_us && set != "about_us" && scrolling == false){
 		setHash("about_us");
 		unSelect();
 		$('#about_us_link').css('border-bottom', '5px solid white')
 	}
-	if (value >= 5305 && set != "contact" && scrolling == false){
+	if (value >= about_us && set != "contact" && scrolling == false){
 		setHash("contact");
 		unSelect();
 		$('#contact_link').css('border-bottom', '5px solid white')
@@ -72,11 +85,16 @@ else if (value < 120 && header_image != "vigilant"){
 	$('.anchor_link').click(function(){
 		if (last != null){
 			$(last).removeAttr('style');
-			
+			unSelect();
+			$(this).css('border-bottom', '5px solid white')
+			last = this;
 		}
-		unSelect();
-		$(this).css('border-bottom', '5px solid white')
-		last = this;
+		else {
+			$(this).css('border-bottom', '5px solid white')
+			last = this;
+		}
+		
+		
 	})
 
 	function unSelect(){
