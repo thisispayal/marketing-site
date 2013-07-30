@@ -60,6 +60,18 @@ ul {
     list-style-type: none;
 }
 
+/** Clearfix **/
+.cf:before, .cf:after { content: ""; display: table; }
+.cf:after { clear: both; }
+.cf { zoom: 1; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
 
 /* Site Header
 =========================================== */
