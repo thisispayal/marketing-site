@@ -19,6 +19,7 @@
         <script src="assets/js/features.js"></script>
         <script src="assets/js/header.js"></script>
         <script src="assets/js/smooth_scroll.js"></script>
+        <script src="assets/js/modernizr.js"></script>
 
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:700italic,400,700' rel='stylesheet' type='text/css'>
@@ -67,7 +68,8 @@
                         <div class="span_12 col tesimonials">
                             <ul class="bxslider_testimonials">
                                 <li>
-                                    <img src="assets/img/testimonial/slider/testimonial_1.png" alt="Testimonial 1">
+                                    <div class="slide cf">
+                                         <img src="assets/img/testimonial/slider/testimonial_1.png" alt="Testimonial 1">
                                         <div class="caption">
                                             <h3>"Since MedStar Washington Hospital center instituted ImageShare, it has consulted in more than <b>1,000     cases</b> with approximately <b>200 facilities</b> world wide &#8212;   second opinions with the potential to   not only speed care delivery, but save healthcare dollars, as well."</h3>
                                         </div>
@@ -77,41 +79,49 @@
                                             </span>
                                             <span class="title">alongandwonderfultitle</span>
                                         </div>
+                                    </div>                                   
                                 </li>
                                 <li>
-                                    <img src="assets/img/testimonial/slider/testimonial_2.png" alt="Testimonial 2">
+                                    <div class="slide cf">
+                                        <img src="assets/img/testimonial/slider/testimonial_2.png" alt="Testimonial 2">
+                                            <div class="caption">
+                                                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, accusantium quo in cupiditate architecto beatae quas numquam expedita dolorum at?</h3>
+                                            </div>
+                                            <div class="source">
+                                                <span class="name">
+                                                    &#8212; Dr. FirstName LastName,
+                                                </span> 
+                                                <span class="title">alongandwonderfultitle</span>
+                                            </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slide cf">
+                                        <img src="assets/img/testimonial/slider/testimonial_3.png" alt="Testimonial 3">
                                         <div class="caption">
-                                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, accusantium quo in cupiditate  architecto beatae quas numquam expedita dolorum at?</h3>
+                                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, reprehenderit labore quaerat   architecto commodi dolorem quia minus voluptatibus dignissimos rerum aliquid Enim, odit, numquam iste quas esse deserunt  dolorum fugit consectetur cupiditate et tenetur totam repellat sequi aperiam perferendis.
+                                            </h3>
                                         </div>
                                         <div class="source">
                                             <span class="name">
                                                 &#8212; Dr. FirstName LastName,
-                                            </span> 
+                                            </span>
                                             <span class="title">alongandwonderfultitle</span>
                                         </div>
-                                </li>
-                                <li>
-                                    <img src="assets/img/testimonial/slider/testimonial_3.png" alt="Testimonial 3">
-                                    <div class="caption">
-                                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, reprehenderit labore quaerat architecto    commodi dolorem quia minus voluptatibus dignissimos rerum aliquid Enim, odit, numquam iste quas esse deserunt  dolorum fugit consectetur cupiditate et tenetur totam repellat sequi aperiam perferendis.</h3>
-                                    </div>
-                                    <div class="source">
-                                        <span class="name">
-                                            &#8212; Dr. FirstName LastName,
-                                        </span>
-                                        <span class="title">alongandwonderfultitle</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="assets/img/testimonial/slider/testimonial_4.png" alt="Testimonial 4">
-                                    <div class="caption">
-                                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, fugiat, officia, animi tempore ut cupiditate   dolorem molestias perferendis aliquam qui ducimus magni eius temporibus   inventore quidem repellat aliquid.  Placeat, officia.</h3>
-                                    </div>
-                                    <div class="source">
-                                        <span class="name">
-                                            &#8212; Dr. FirstName LastName,
-                                        </span>
-                                        <span class="title">alongandwonderfultitle</span>
+                                    <div class="slide cf">
+                                        <img src="assets/img/testimonial/slider/testimonial_4.png" alt="Testimonial 4">
+                                        <div class="caption">
+                                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, fugiat, officia, animi tempore ut  cupiditate   dolorem molestias perferendis aliquam qui ducimus magni eius temporibus   inventore quidem repellat     aliquid.  Placeat, officia.</h3>
+                                        </div>
+                                        <div class="source">
+                                            <span class="name">
+                                                &#8212; Dr. FirstName LastName,
+                                            </span>
+                                            <span class="title">alongandwonderfultitle</span>
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
@@ -134,7 +144,7 @@
                 <div class="page">
         <div id="uses">
             <div class="row">
-                <span class="section-heading">Uses</span>
+                <span class="section_heading">Uses</span>
             </div>
 
             <div class="row">
@@ -203,7 +213,7 @@
                             the images to a proctor, who then reviews the image using ImageShare. Extra sentence.
                          </div>
                     </div>
-                </div>
+                </div> 
                 <div class="span_1 col">
                     &nbsp;
                 </div>
@@ -283,7 +293,9 @@
                     <td>
                         <ul class="slider_descriptions">
                             <!-- PAGE 1 -->
-                            <li><h2>Accessible Anywhere 1</h2>
+                            <li>
+                                <div class="arrow"></div>
+                                <h2>Accessible Anywhere 1</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, delectus tempora repudiandae libero rerum similique   iste dolorem officiis alias explicabo voluptates sint quod assumenda sequi ullam omnis doloribus ut provident id ipsa sunt    nihil nesciunt corrupti! Esse voluptas nihil eum!</p>
                             </li>
                             <li>
@@ -328,7 +340,7 @@
                  <div class="page">
                 <div id="support">
                     <div class="row">
-                        <span class="section-heading">SUPPORT</span>
+                        <span class="section_heading">SUPPORT</span>
                     </div>
                     <div class="row">
                         <div class="span_3 col">
@@ -378,25 +390,25 @@
             <div class="pricing">
                 <div class="page">
                 <div class="row">               
-                    <div class="span_12 col header">
+                    <div class="span_12 section_heading">
                         Pricing Options
                     </div>                 
                 </div>
-                <div class="row">
+                <div class="row cf">
                     <div class="span_1_5 col spacer">
                         &nbsp;
                     </div>
-                    <div class="span_3 col">
+                    <div class="span_3 col cf">
                         <div class="pricing_option" id="study">
                             Study
                         </div>                    
                     </div>
-                    <div class="span_3 col">
+                    <div class="span_3 col cf">
                          <div class="pricing_option" id="account">
                             Account
                         </div>
                     </div>
-                    <div class="span_3 col">
+                    <div class="span_3 col cf">
                          <div class="pricing_option" id="flat">
                             Flat Fee
                         </div>
@@ -406,7 +418,7 @@
                     </div>
                 </div> 
     
-                <div class="row">
+                <div class="row cf">
                     <div class="span_1_5 col">
                         &nbsp;
                     </div>
@@ -457,13 +469,13 @@
             </div> 
             </div>
             
-        
+         
             <!-- About Us -->
             <a name="about_us" id="about_us" class="anchor"></a>
             <div class="about_us">
                 <div class="page">
                     <div class="row">               
-                        <div class="span_12 col header">
+                        <div class="span_12 col section_heading">
                             About Us
                         </div>                 
                     </div>
