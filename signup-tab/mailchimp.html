@@ -31,8 +31,6 @@
                         var fg = $(this).parents('.field-group');
                         $(this).focus();
                     }
-                    fg.not('.focused-field').addClass('focused-field').children('.field-help').slideDown('fast');
-                    $('.focused-field').not(fg).removeClass('focused-field').children('.field-help').slideUp('fast');
                 }
                 event.stopPropagation();
             });
@@ -45,8 +43,6 @@
                     } else {
                         fg.find('input, select').slice(0, 1).focus();
                     }
-                    fg.not('.focused-field').addClass('focused-field').children('.field-help').slideDown('fast');
-                    $('.focused-field').not(fg).removeClass('focused-field').children('.field-help').slideUp('fast');
                 }
                 event.stopPropagation();
             });
@@ -191,25 +187,6 @@
 			margin:0;
 			overflow:auto;
 		}
-		.field-help{
-			display:none;
-			font-weight:normal;
-			position:static;
-			float:none;
-			clear:both;
-			margin:5px -5px -5px -5px;
-			width:auto;
-			padding:8px 10px;
-			line-height:16px;
-			font-size:12px;
-			-moz-border-radius:0;
-			border-radius:0;
-			-webkit-border-radius:0;
-		}
-		.field-help .help{
-			min-height:16px;
-			text-decoration:none;
-		}
 		.field-group .feedback br{
 			display:none;
 		}
@@ -229,7 +206,7 @@
 		}
 		label .asterisk{
 			position:absolute;
-			top:36px;
+			top:18px;
 			right:10px;
 			font-size:30px;
 		}
@@ -481,7 +458,7 @@
 			color:#336699;
 		}
 		.button:link,.button:active,.button:visited,.button,.button span,.button-small:link,.button-small:active,.button-small:visited,.button-small{
-			background-color:#336699;
+			background-color:rgb(204,114,54);
 			color:#ffffff;
 		}
 		.button:hover,.button-small:hover{
@@ -511,10 +488,6 @@
 		}
 		.asterisk{
 			color:#cc6600;
-		}
-		.field-help{
-			background-color:#dcdcdc;
-			color:#000;
 		}
 		.error,.errorText{
 			font-size:12px;
@@ -561,27 +534,22 @@
 
 <div id="mergeTable" class="mergeTable">
 
-
-<div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
-<label for="MERGE0"><strong>Email Address</strong> <span class="asterisk">*</span></label>
+    <div class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-0">
+<label for="MERGE1"><span class="asterisk">*</span></label>
 <div class="field-group">
-    <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
+    <input type="text" placeholder="Name" name="MERGE1" id="MERGE1" size="25" value="">
     
-    <div class="field-help">Email</div>
     
     
 </div>
 
 </div>
 
-
-
-<div class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-1">
-<label for="MERGE1"><strong>First Name</strong> <span class="asterisk">*</span></label>
+<div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-1">
+<label for="MERGE0"><span class="asterisk">*</span></label>
 <div class="field-group">
-    <input type="text" name="MERGE1" id="MERGE1" size="25" value="">
+    <input type="email" placeholder="Email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
     
-    <div class="field-help">Name</div>
     
     
 </div>
@@ -598,7 +566,7 @@
 <br>
 
 <div class="submit_container">
-<input type="submit" class="button" name="submit" value="Subscribe to list">
+<input type="submit" class="button" name="submit" value="Submit">
 </div>
 </form>
 
