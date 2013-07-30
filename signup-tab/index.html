@@ -12,10 +12,10 @@
         <link rel="stylesheet" media="all" type="text/css" href="../assets/css/styles.css" />
         
         <style>
-            .spacer {
+           /* .spacer {
                 padding: 150px;
             }
-
+               */
             .container {
                 position:absolute;
                 bottom:-1px;
@@ -28,21 +28,17 @@
                 cursor: pointer;
                 background-color: rgb(213,78,39); 
                 color:white;
-                padding: 10px 40px 10px 40px;
+                padding: 10px 25px 10px 25px;
                 border-top-left-radius: 10px;
                 border-top-right-radius: 10px;
                 border:1px solid rgb(178, 65, 27); 
             }
 
             .content {
-                background-color:rgba(211,211,211,.4);
+                background-color:rgb(240,240,240);
                 height:200px;
                 overflow:hidden;
-                padding: 10px 40px 10px 40px;
-            }
-
-            .main {
-                background-color:#eee;
+                padding: 10px 25px 10px 25px;
             }
 
             input {
@@ -67,6 +63,10 @@
                 -webkit-transform: rotate(180deg);
             }
 
+            .signup-tab {
+                z-index:2;
+            }
+
         </style>    
     </head>
     
@@ -74,14 +74,12 @@
     <div class="page">
 
         <div class="main">
-            <div>lorem ipsum</div>
-            <div>lorem ipsum</div>
+            <img src="../assets/img/background_2.jpg" width="1200"/>
         </div>
         
         <div class="signup-tab">
-            <div class="spacer"></div>
             <div style="" class="container">
-                <div class="toggle closed">Sign up for more information &nbsp; <img src="../assets/img/signup-arrow.png" width="25"/ id="signup-arrow"> </div>
+                <div class="toggle closed">Sign up for more information &nbsp; <img src="../assets/img/signup-arrow.png" width="20"/ id="signup-arrow"> </div>
                 <div class="content">
                     <input type="text" placeholder="Name" />
                     <br />
@@ -90,9 +88,8 @@
                     <div class="submit"><span class="button-style">Submit</span></div>
                 </div>
             </div>
-
+            </div>
         </div>
-    </div>
 </body>
 
     <script src="../assets/js/jquery-1.10.2.js"></script>
