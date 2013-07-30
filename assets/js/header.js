@@ -17,7 +17,7 @@ $(document).ready(function() {
 	last = "landing";
 	
 });
-
+ 
 
 
 $(window).scroll( function() {
