@@ -37,7 +37,7 @@ else if (value < 120 && header_image != "vigilant"){
 	function setHash(value){
 		set = value;
 		var r=value;
-			if(navigator.userAgent.indexOf('Chrome/')!=-1){
+			if(navigator.userAgent.indexOf('Chrome/')!=-1 || navigator.userAgent.indexOf('Firefox/')){
  			top.history.pushState("", "", "#" + r);
  			return;
 				};
