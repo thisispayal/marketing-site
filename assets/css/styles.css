@@ -50,8 +50,11 @@ a{
     overflow: scroll;
 }
 
+.page {
+    margin-top: 2%;
+}
+
 .opaque{
-    background-color:rgba(255,255,255);
     background-color:rgba(255,255,255,0.6);
 }
 
@@ -118,8 +121,8 @@ ul {
     list-style-type: none;
 }
 
-td.arrows{
-    cursor: pointer;
+#contact-bullet {
+    color: rgb(8, 191, 250);
 }
 
 
@@ -216,13 +219,11 @@ img#uses-image {
 
 
 .selected{
-    border-bottom: 5px solid rgb(24, 134, 175);
     border-bottom: 5px solid rgba(24, 134, 175, 1);
 }
 
 .slider_icons > li > div:hover{
     cursor: pointer;
-    border-bottom: 5px solid rgba(24, 134, 175);
     border-bottom: 5px solid rgba(24, 134, 175, .6);
 }
 
@@ -386,6 +387,7 @@ img#uses-image {
     text-align: center;
     font-size: 100px;
     color: black;
+    margin-bottom: 2%;
 }
 
 .message p{
