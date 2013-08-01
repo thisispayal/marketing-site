@@ -150,7 +150,6 @@ ul {
     overflow: hidden;
 }
 .slide img{
-    padding-left: 10%;
     padding-top: 1%;
     padding-bottom: 5%;
     padding-right: 10%;
@@ -158,9 +157,8 @@ ul {
 }
 
 .caption{
-    padding-right: 10%;
+    overflow: auto;
 }
-
 
 .name{
     font-size: 30px;
