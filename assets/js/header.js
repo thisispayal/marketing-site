@@ -1,6 +1,6 @@
-var set = "home";
+var set = "landing";
 var header_image = null;
-var last = null;
+var last = "landing";
     
 
 $(document).ready(function() {
@@ -11,10 +11,6 @@ $(document).ready(function() {
 	pricing = support + $('.pricing').height()
 	about_us = pricing + $('.about_us').height()
 	contact = about_us + $('contact').height()
-
-
-	set = "landing";
-	last = "landing";
 	
 });
  
@@ -46,7 +42,7 @@ else if (value < 120 && header_image != "vigilant"){
  		}
  		else{
   		top.location.hash=r;
-  		
+
 		};
 
 	}
@@ -84,17 +80,11 @@ else if (value < 120 && header_image != "vigilant"){
 	}
 
 	$('.anchor_link').click(function(){
-		if (last != null){
+		
 			$(last).removeAttr('style');
 			unSelect();
 			$(this).css('border-bottom', '5px solid white')
-			last = this;
-		}
-		else {
-			$(this).css('border-bottom', '5px solid white')
-			last = this;
-		}
-		
+	
 		
 	})
 
