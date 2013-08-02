@@ -145,7 +145,7 @@ ul {
 }
 
 .testimonials{
-    background-color: black;
+    /*background-image: url(../img/testimonial/testimonials-background.png);*/
     color: white;
     overflow: hidden;
     padding-top: 8px;
@@ -188,15 +188,14 @@ ul {
 }
 
 .section-subheading {
-    font-family: "Open Sans", sans-serif; font-weight: 300;
-    font-size: 230%;
+    font-size: 250%;
     margin-bottom: 5%;
     color: #3085af;
     text-align: center;
 }
 
 .section-subbody {
-    font-weight: 200;
+    font-weight: 300;
     font-size: 120%;
     margin-bottom: 5%;
     text-align: center;
