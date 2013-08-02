@@ -47,7 +47,7 @@ a{
 }
 
 .content{  
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .page {
