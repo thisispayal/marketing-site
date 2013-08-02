@@ -6,20 +6,28 @@ $(document).ready(function(){
                 $('.testimonial_slides > li').slice(1).hide();
 
                 $("#next").click(function(){
-                    scroll("next");
+                    scroll_features("next");
                 })
 
                 $("#prev").click(function(){
-                    scroll("prev");
+                    scroll_features("prev");
                 })
 
-                function auto(){
-                    intv = setInterval(function() {
-                        scroll("next");
-                        scroll_testimonials("next");
-                    }, 4000 );       
-                }
-                auto(); // to start immediately auto-slide
+                $("#next_testimonials").click(function(){
+                    scroll_testimonials("next");
+                })
+
+                $("#prev_testimonials").click(function(){
+                   scroll_testimonials("prev");
+                })
+
+                // function auto(){
+                //     intv = setInterval(function() {
+                //         scroll("next");
+                //         scroll_testimonials("next");
+                //     }, 4000 );       
+                // }
+                // auto(); // to start immediately auto-slide
 
                 // PAUSE ON MOUSEOVER
                 
@@ -32,13 +40,6 @@ $(document).ready(function(){
                 });
                 
 
-                $("#next_testimonials").click(function(){
-                    scroll_testimonials("next");
-                })
-
-                $("#prev_testimonials").click(function(){
-                   scroll_testimonials("prev");
-                })
 
                 function scroll_testimonials(direction){                 
                     var testimonials_list = $(".testimonial_slides");
@@ -57,7 +58,7 @@ $(document).ready(function(){
                 }
                 
 
-                function scroll(direction){                 
+                function scroll_features(direction){                 
                     var icons_list = $(".slider_icons");
                     var icons = icons_list.children("li");
 
