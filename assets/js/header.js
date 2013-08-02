@@ -35,7 +35,7 @@ function unSelect(){
 $(document).ready(function() {
 	setHash("home");
 	landing = $('.landing_page').height() + $('.testimonials').height() - 200
-	overview = landing + $('.overview').height() + 548 //for some reason overview height is smaller than it should be
+	overview = landing + $('.overview').height() + 400 //for some reason overview height is smaller than it should be
 	uses = overview + $('.uses').height()
 	features = uses + $('.features').height()
 	support = features + $('.support').height()
