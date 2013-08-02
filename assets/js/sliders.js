@@ -16,6 +16,7 @@ $(document).ready(function(){
                 function auto(){
                     intv = setInterval(function() {
                         scroll("next");
+                        scroll_testimonials("next");
                     }, 4000 );       
                 }
                 auto(); // to start immediately auto-slide
@@ -29,8 +30,6 @@ $(document).ready(function(){
                 $('.testimonial_slider').on('mouseenter mouseleave', function( e ){
                     var onMouEnt = e.type=='mouseenter' ? clearInterval(intv) : auto() ;
                 });
-                
-
                 
 
                 $("#next_testimonials").click(function(){
