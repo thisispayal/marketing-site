@@ -43,20 +43,6 @@ $(document).ready(function() {
 	about_us = pricing + $('.about_us').height()
 	contact = about_us
 
-	console.log("Home: (0, " + landing + ")")
-	console.log("Overview: (" + landing + ", " + overview + ")")
-	console.log("Uses: (" + overview + ", " + uses + ")")
-	console.log("Features: (" + uses + ", " + features + ")")
-	console.log("Support: (" + features + ", " + support + ")")
-	console.log("Pricing: (" + support + ", " + pricing + ")")
-	console.log("About Us: (" + pricing + ", " + about_us + ")")
-
-
-
-	set = "landing";
-	last = "landing";
-
-
 	$("a.anchor_link").click(function(){
 	unSelect();
 	})
