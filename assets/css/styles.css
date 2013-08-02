@@ -46,8 +46,7 @@ a{
         position:relative;
 }
 
-.content{
-    padding-top: 110px;
+.content{  
     overflow: scroll;
 }
 
@@ -130,30 +129,34 @@ ul {
 /* Landing Page
 =========================================== */   
 .landing_page{ 
-    background: url(../img/background.jpg);
-    margin-top: -200px;
+    background: url(../img/background_3.png);
+    margin-top: -100px;
     height: 1300px;
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
 
+
 /* Testimonials
 =========================================== */
+.testimonial_slider{
+    table-layout: fixed;
+}
+
 .testimonials{
-    margin-top: -100px;
-    height: 325px;
+    background-color: black;
+    color: white;
     overflow: hidden;
-    background-color: #000;
+    padding-top: 8px;
+    padding-bottom: 25px;
 }
 
-.bxslider_testimonials li{
-    background: #000;
-    color: #fff;
+.slide{
+    height: 250px;
+    overflow: hidden;
 }
-
-.bxslider_testimonials img{
-    padding-left: 10%;
+.slide img{
     padding-top: 1%;
     padding-bottom: 5%;
     padding-right: 10%;
@@ -161,9 +164,8 @@ ul {
 }
 
 .caption{
-    padding-right: 10%;
+    overflow: auto;
 }
-
 
 .name{
     font-size: 30px;
@@ -174,6 +176,11 @@ ul {
     font-style: oblique;
     color: #48bffa;
 }
+
+.content_slides{
+    width: 90%;
+}
+
 
 /* Uses
 =========================================== */
