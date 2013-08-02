@@ -21,13 +21,13 @@ $(document).ready(function(){
                    scroll_testimonials("prev");
                 })
 
-                // function auto(){
-                //     intv = setInterval(function() {
-                //         scroll("next");
-                //         scroll_testimonials("next");
-                //     }, 4000 );       
-                // }
-                // auto(); // to start immediately auto-slide
+                function auto(){
+                    intv = setInterval(function() {
+                        scroll_features("next");
+                        scroll_testimonials("next");
+                    }, 4000 );       
+                }
+                auto(); // to start immediately auto-slide
 
                 // PAUSE ON MOUSEOVER
                 
