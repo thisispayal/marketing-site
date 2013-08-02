@@ -188,7 +188,7 @@ ul {
 }
 
 .section-subheading {
-    font-family: "Open Sans", sans-serif; font-weight: lighter;
+    font-family: "Open Sans", sans-serif; font-weight: 300;
     font-size: 230%;
     margin-bottom: 5%;
     color: #3085af;
