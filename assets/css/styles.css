@@ -145,7 +145,7 @@ ul {
 }
 
 .testimonials{
-    /*background-image: url(../img/testimonial/testimonials-background.png);*/
+    background-color: black;
     color: white;
     overflow: hidden;
     padding-top: 8px;
@@ -183,10 +183,9 @@ ul {
 
 /* Overview
 =========================================== */
-.overview-box {
-
+.overview-image {
+    /*TODO: formatting and lining up with descriptions*/
 }
-
 .section-subheading {
     font-size: 250%;
     margin-bottom: 5%;
