@@ -31,17 +31,17 @@
                 </div>
 
                 <div class="span_1_5 col">
-                    First Name
+                    First Name <span class="required">*</span>
                 </div>
                 <div class="span_2_5 col">
-                    <input type="text"  class="signup-field" />
+                    <input type="text"  tabindex=1 class="signup-field" required />
                 </div>
 
                 <div class="span_1_5 col">
-                    Specialty
+                    Specialty <span class="required">*</span>
                 </div>
                 <div class="span_2_5 col">
-                <input type="text" class="signup-field" />
+                <input type="text" tabindex=5 class="signup-field" required/>
                 </div>
 
                 <div class="span_2">
@@ -56,16 +56,16 @@
                 </div>
 
                 <div class="span_1_5 col">
-                    Last Name
+                    Last Name <span class="required">*</span>
                 </div>
                 <div class="span_2_5 col">
-                    <input type="text" class="signup-field" />
+                    <input type="text" tabindex=2 class="signup-field" required/>
                 </div>
                 <div class="span_1_5 col">
-                    Password
+                    Password <span class="required">*</span>
                 </div>
                 <div class="span_2_5 col">
-                <input type="text" class="signup-field" />
+                <input type="text" tabindex=6 class="signup-field" required />
                 </div>
 
                 <div class="span_2">
@@ -80,16 +80,16 @@
                 </div>
 
                 <div class="span_1_5 col">
-                    Institution
+                    Institution <span class="required">*</span>
                 </div>
                 <div class="span_2_5 col">
-                    <input type="text" class="signup-field" />
+                    <input type="text" tabindex="3" class="signup-field" required/>
                 </div>
                 <div class="span_1_5 col">
-                    Confirm Password
+                    Confirm Password <span class="required">*</span>
                 </div>
                 <div class="span_2_5 col">
-                    <input type="text" class="signup-field" />
+                    <input type="text" tabindex=7 class="signup-field" required/>
                 </div>
 
                 <div class="span_2">
@@ -103,31 +103,56 @@
                     &nbsp;
                 </div>
                 <div class="span_1_5 col">
-                    Email Address
+                    Email Address <span class="required">*</span>
                 </div>
                 <div class="span_2_5 col">
-                    <input type="email" class="signup-field" />
+                    <input type="email" tabindex=4 class="signup-field" required />
                 </div>
                 <div class="span_1_5 col">
-                    How did you hear about ImageShare?
+                    How did you hear about ImageShare? <span class="required">*</span>
                 </div>
                 <div class="span_2_5 col">
-                    <select class="signup-field">
+                    <select class="signup-field" tabindex="8" required>
                         <option>Web search</option>
                         <option>Sent image through ImageShare</option>
                         <option>Received image through ImageShare</option>
                         <option>Referral from colleague</option>
                         <option>Information packet from hospital/practice group</option>
-                        <option>Other</option>
+                        <option id="other">Other</option>
                     </select>
                 </div>
                 <div class="span_2">
                     &nbsp;
                 </div>
             </div>
+            
+            <div class="row" id="other-row">
+                <div class="span_6 col">&nbsp;</div>
+                <div class="span_1_5 col">&nbsp;</div>
+                <div class="span_2_5 col">
+                    <input type="text" tabindex="9" class="signup-field" />
+                </div>
+                <div class="span_2">&nbsp;</div>
+            </div>
+            
+            <div class="row">
+                <div class="span_2 col">&nbsp;</div>
+                <div class="span_8 col">
+                    <a href="#" class="button submit_button">SUBMIT</a>
+                </div>
+                <div class="span_2">&nbsp;</div>
+            </div>
 
         </form>
     </div>
-
 </body>
+    <script src="../assets/js/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".signup-field").on("select", "#other", function(){
+                $("#other-row").show();
+            });
+        });
+    </script>
+
 </html>
