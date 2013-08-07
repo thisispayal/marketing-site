@@ -157,6 +157,9 @@ the gridpak.js file to use '.page' as it's container.
             ...
         }
         */
+        .span_point_25 {
+            width: 2.0833333334%;
+        }
 
         .span_point_5 {
             width:4.1666666667%;

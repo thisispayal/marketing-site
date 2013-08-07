@@ -8,6 +8,23 @@ Grey:          #767475     ||   rgb(118, 116, 117)
 ==================================================
 */
 
+/* Font Options: for development, not final
+==================================================
+italics
+    light: 300italic, 
+    normal: 400italic,
+    semi-bold: 600italic,
+    bold: 700italic
+    extra-bold: 800italic,
+regular
+    normal: 400,
+    light: 300, -> blockquote, overview sub-body
+    bold: 700, -> button, 
+    semi-bold: 600, -> testimonial name
+    extra-bold: 800
+==================================================
+*/
+
 /* Sitewide Styling
 =========================================== */
 
@@ -29,6 +46,15 @@ body{
 a{
     text-decoration: none;
     color: #f76839;
+}
+
+a:hover{
+    color: rgb(178,217,244);
+}
+
+blockquote {
+    font-weight:300;
+    font-size: 150%;
 }
 
 /* This offsets anchor location to compensate for the header height, if header height changes this must be adjusted */
@@ -100,7 +126,7 @@ ul {
     margin-top: 10px;
 }
 .trial_button {
-    margin-top: -10px;
+    margin-top: -3px;
     margin-left: 20px;
 
     margin-right: 25px;
@@ -145,11 +171,14 @@ ul {
 }
 
 .testimonials{
-    background-color: black;
+    background: url(../img/testimonial/testimonials-background.png);
+    background-repeat:no-repeat;
+    background-size: 110%;
     color: white;
     overflow: hidden;
-    padding-top: 8px;
+    margin-top: -6%;
     padding-bottom: 25px;
+    z-index:4;
 }
 
 .slide{
@@ -168,6 +197,7 @@ ul {
 }
 
 .name{
+    font-weight: 600;
     font-size: 30px;
     font-style: oblique; 
 }
@@ -219,7 +249,8 @@ img#uses-image {
     text-align:center;
 }
 
-#uses-description {
+.uses-description {
+    font-weight: 300;
     padding-top: 5%;
     font-size:150%;
     padding-bottom:5%;
@@ -230,6 +261,7 @@ img#uses-image {
 }
 
 .uses-subdescriptions {
+    font-weight: 300;
     font-size:120%;
 }
 
@@ -300,10 +332,10 @@ img#uses-image {
 }
 
 /*Use for the descriptions. Even if they end up being different sizes, they should be the same proportion*/
-.support {
+/*.support {
     margin-top:4%;
     font-size:20px;
-}
+}*/
 
 .description {
     padding-top: 2%;
@@ -323,15 +355,16 @@ img#uses-image {
     text-align: center;
     color: white;
     margin-top: 60px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     font-size: 50px;
 }
 
 .pricing_details{
     padding-top: 10px;
+    font-weight: 300;
     font-size: 20px;
-    margin-top: -165px;
+    margin-top: -185px;
     padding-right: 20px;
     margin-bottom: 100px;
 }
@@ -386,6 +419,7 @@ img#uses-image {
 
 .text_box > p {
     font-size: 30px;
+    font-weight: 300;
 }
 
 .values ul > li {
@@ -400,6 +434,7 @@ img#uses-image {
 
 #story > p{
     font-size: 20px;
+    font-weight: 300;
 }
 
      
