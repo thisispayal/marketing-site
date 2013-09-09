@@ -8,13 +8,13 @@
     <title>Vigilant Medical</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" media="all" type="text/css" href="../assets/css/gridpak.css" />
     <link rel="stylesheet" media="all" type="text/css" href="../assets/css/styles.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="../assets/css/responsive-grid.css" />
 
    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic, 400italic,600italic,700italic800italic,400,300,700,600,800' rel='stylesheet' type='text/css' />
 
 </head>
-<body>
+<body class="container">
     <div class="signup page">
                 <div class="row">
                     <div class="span_12 col trial-title">
@@ -26,34 +26,25 @@
                 </div>
         <form>
             <div class="row">
-                <div class="span_2 col">
-                    &nbsp;
-                </div>
 
                 <div class="span_1_5 col">
-                    First Name <span class="required">*</span>
+                    <div class="field-name">First Name <span class="required">*</span></div>
                 </div>
                 <div class="span_2_5 col">
                     <input type="text"  tabindex=1 class="signup-field" required />
                 </div>
 
                 <div class="span_1_5 col">
-                    Specialty <span class="required">*</span>
+                    <div class="field-name">Specialty <span class="required">*</span></div>
                 </div>
                 <div class="span_2_5 col">
                 <input type="text" tabindex=5 class="signup-field" required/>
                 </div>
 
-                <div class="span_2">
-                    &nbsp;
-                </div>
             </div>
 
 
             <div class="row">
-                <div class="span_2 col">
-                    &nbsp;
-                </div>
 
                 <div class="span_1_5 col">
                     Last Name <span class="required">*</span>
@@ -68,16 +59,10 @@
                 <input type="text" tabindex=6 class="signup-field" required />
                 </div>
 
-                <div class="span_2">
-                    &nbsp;
-                </div>
             </div>
 
 
             <div class="row">
-                <div class="span_2 col">
-                    &nbsp;
-                </div>
 
                 <div class="span_1_5 col">
                     Institution <span class="required">*</span>
@@ -92,16 +77,11 @@
                     <input type="text" tabindex=7 class="signup-field" required/>
                 </div>
 
-                <div class="span_2">
-                    &nbsp;
-                </div>
             </div>
 
 
             <div class="row">
-                <div class="span_2 col">
-                    &nbsp;
-                </div>
+
                 <div class="span_1_5 col">
                     Email Address <span class="required">*</span>
                 </div>
@@ -121,18 +101,14 @@
                         <option id="other">Other</option>
                     </select>
                 </div>
-                <div class="span_2">
-                    &nbsp;
-                </div>
             </div>
             
             <div class="row" id="other-row">
-                <div class="span_6 col">&nbsp;</div>
+                <div class="span_4 col">&nbsp;</div>
                 <div class="span_1_5 col">&nbsp;</div>
                 <div class="span_2_5 col">
                     <input type="text" tabindex="9" class="signup-field" />
                 </div>
-                <div class="span_2">&nbsp;</div>
             </div>
             
             <div class="row">
@@ -146,6 +122,7 @@
         </form>
     </div>
 </body>
+
     <script src="../assets/js/jquery-1.10.2.js"></script>
     <script>
         $(document).ready(function(){

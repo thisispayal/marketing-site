@@ -8,7 +8,7 @@ Grey:          #767475     ||   rgb(118, 116, 117)
 ==================================================
 */
 
-/* Font Options: for development, not final
+/* Font Options: for development, not final listing
 ==================================================
 italics
     light: 300italic, 
@@ -24,6 +24,10 @@ regular
     extra-bold: 800
 ==================================================
 */
+
+/*TODO: consistentify font styling, make sectional layout proportional,
+make sizing responsive -- font, images, page layouts, javascript-based site navigation
+ */
 
 /* Sitewide Styling
 =========================================== */
@@ -172,12 +176,12 @@ ul {
 }
 
 .testimonials{
-    background: url(../img/testimonial/testimonials-background.png);
+    background-color:black;
     background-repeat:no-repeat;
     background-size: 110%;
     color: white;
     overflow: hidden;
-    margin-top: -6%;
+    margin-top: -12%;
     padding-bottom: 25px;
     z-index:4;
 }
@@ -332,6 +336,14 @@ img#uses-image {
     text-align:center;
 }
 
+.box_6.col{
+    text-align:center;
+}
+
+.support-circle {
+    text-align: center;
+}
+
 /*Use for the descriptions. Even if they end up being different sizes, they should be the same proportion*/
 /*.support {
     margin-top:4%;
@@ -365,7 +377,6 @@ img#uses-image {
     padding-top: 10px;
     font-weight: 300;
     font-size: 20px;
-    margin-top: -185px;
     padding-right: 20px;
     margin-bottom: 100px;
 }
@@ -474,10 +485,11 @@ img#uses-image {
 .contact_methods ul{
     margin-bottom: 35px;
     font-size: 24px;
+    font-weight: 300;
 }
 
 .type{
-    font-style: oblique;
+
 }
 
 .submit_button {
@@ -487,6 +499,11 @@ img#uses-image {
 
 /* Free Trial
 =========================================== */
+.container {
+    margin-left: 16.6666666667%;
+    margin-right: 16.6666666667%;
+}
+
 @media screen and (min-width: 920px) {
 
     .trial-title {
@@ -529,34 +546,48 @@ img#uses-image {
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 919px) {
-    
-    .span_1 {
-        width: 25%;
-    }
-    
-    .span_1_5 {
-        width: 37.5%;
+ @media screen and (min-width: 0px) and (max-width: 919px) {
+
+    .trial-title {
+        margin-top: 3%;
+        font-size: 200%;
+        text-align: center;
     }
 
-    .span_2 {
-        width: 50%;
-    }
-    
-    .span_2_5 {
-        width: 62.5%;
-    }
-
-    .span_3 {
-        width: 75%;
-    }
-    
-    .span_4 {
-        width: 100%;
+    .trial-subhead {
+        margin-top: -1%;
+        font-size: 120%;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 3%;
     }
 
-    body {
-        width:auto;
-        position: relative;
+    form {
+        font-size: 100%;
+        font-weight: 300;
+    }
+
+    .signup-field {
+        width: 150%;
+        height: 20px;
+        border: 2px solid grey;
+        margin-top: -5px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+    }
+
+    .required {
+        color: #f76839;
+        font-weight: 700;
+    }
+
+    #other-row {
+        display:none;
+    }
+
+    .field-name {
+
     }
 }
