@@ -210,7 +210,8 @@ the gridpak.js file to use '.page' as it's container.
 
         .span_6, 
         .description,
-        .main-content {
+        .main-content,
+        .box_6 {
             width:50.0%;
 		}
 

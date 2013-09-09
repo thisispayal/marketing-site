@@ -256,7 +256,7 @@ img#uses-image {
 
 .uses-description {
     font-weight: 300;
-    padding-top: 5%;
+    padding-top: 2%;
     font-size:150%;
     padding-bottom:5%;
 }
@@ -484,12 +484,12 @@ img#uses-image {
 
 .contact_methods ul{
     margin-bottom: 35px;
-    font-size: 24px;
+    font-size: 23px;
     font-weight: 300;
 }
 
 .type{
-
+    font-weight: 700;
 }
 
 .submit_button {

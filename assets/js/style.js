@@ -3,4 +3,11 @@ Not using this yet....don't want to use Javascript for styling, but might need t
 Consider other options.
 */
 
-var maxHeight = Math.max.apply(null, $(".pricing-col").map(function () { return $(this).height(); }).get());
+$(document).ready(function () {
+    var inputWidth = { value: "" };
+    var inputHeight = { value: "" };
+    inputWidth.value = $("input").width();
+    inputHeight.value = $("input").height() + 5;
+    $("select").css("width", inputWidth.value);
+    $("select").css("height", inputHeight.value);
+});
