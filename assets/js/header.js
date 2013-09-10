@@ -54,15 +54,17 @@ $(document).ready(function() {
 $(window).scroll( function() {
    var value = $(this).scrollTop();
 if (value > 120 && header_image != "imageshare"){
-	header_image = "imageshare";
-		$('#vigilant').hide();
-		$('#imageshare').show();
+    header_image = "imageshare";
+        $('#vigilant').fadeOut(600);
+        $('#vigilant').hide();
+		$('#imageshare').fadeIn(600);
 }
 
 else if (value < 120 && header_image != "vigilant"){
 	header_image = "vigilant";
+	$('#imageshare').fadeOut('600');
 	$('#imageshare').hide();
-	$('#vigilant').show();
+	$('#vigilant').fadeIn('600');
 }
 
 

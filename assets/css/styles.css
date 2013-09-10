@@ -112,8 +112,8 @@ ul {
     width: 100%;
     position: fixed;
     color: white;
-    font-size: 20px;
-    background-color: rgb(86, 86, 86);
+    font-size: 22px;
+    font-weight: 300;
     background-color: rgba(86, 86, 86, .95);
     z-index: 10000;
 }
@@ -129,17 +129,15 @@ ul {
 .site_header img{
     margin-left: 25px;
     margin-top: 10px;
+    float: left;
 }
+
 .trial_button {
     margin-top: -3px;
     margin-left: 20px;
 
     margin-right: 25px;
     background-color:#f76839;
-}
-
-.site_header img{
-    float: left;
 }
 
 .site_header ul{    
@@ -342,6 +340,7 @@ img#uses-image {
 
 .support-circle {
     text-align: center;
+    width: 400px;
 }
 
 /*Use for the descriptions. Even if they end up being different sizes, they should be the same proportion*/
