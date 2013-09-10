@@ -286,7 +286,7 @@ img#uses-image {
 }
 
 .slider_icons > li > div > img{
-    width: 240px;
+    width: 175px;
 }
 
 .slider_icons > li > div{   
@@ -340,7 +340,7 @@ img#uses-image {
 
 .support-circle {
     text-align: center;
-    width: 400px;
+    width: 375px;
 }
 
 /*Use for the descriptions. Even if they end up being different sizes, they should be the same proportion*/
@@ -350,7 +350,7 @@ img#uses-image {
 }*/
 
 .description {
-    padding-top: 2%;
+    padding-top: 1.5%;
     padding-bottom: 2%;
     font-size: 150%;
 }
