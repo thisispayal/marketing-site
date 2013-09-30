@@ -4,6 +4,12 @@
  * Generator - http://gridpak.com/
  * Created by @erskinedesign
  */
+
+/*
+TODO: responsive grid, centered layout with container so the rest of the percentage sizings are relative
+    to container size.
+*/
+
 body,
 html,
 div {
@@ -12,9 +18,9 @@ div {
  }
  
 /*
-Page is our center aligned 95% width container. We have set its 'position' as relative
+Page is our center aligned 95% width container. We have set it's 'position' as relative
 so that the Gridpak overlay will appear in the correct position. We have also updated
-the gridpak.js file to use '.page' as its container.
+the gridpak.js file to use '.page' as it's container.
 */
 .page {
      margin: 0 auto;
@@ -25,7 +31,7 @@ the gridpak.js file to use '.page' as its container.
 
 /* Reusable column setup */
 .col {
-    border:0px solid rgba(0,0,0,0);
+    border:0px solid rgb(0,0,0);
     float:left;
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
@@ -56,7 +62,7 @@ the gridpak.js file to use '.page' as its container.
     
     ----------------------------------------------------------------------------- */
 
-   /* @media screen and (min-width: 0px) and (max-width: 959px) {
+    @media screen and (min-width: 0px) and (max-width: 959px) {
         
         .col {
             margin-left:200%;
@@ -78,7 +84,7 @@ the gridpak.js file to use '.page' as its container.
         }
         */
         
-       /* .span_1 {
+        .span_1 {
             width:6.5%;
         }
         .span_2 {
@@ -95,7 +101,8 @@ the gridpak.js file to use '.page' as its container.
             width:40.5%;
         }
         .span_6,
-        .description {
+        .description,
+        .box_6 {
             width:50.0%;
         }
         .span_7 {
@@ -119,98 +126,6 @@ the gridpak.js file to use '.page' as its container.
             width:100%;
         }
     }
-
-
-    /* grid for sign up form. NOTE: it's the same. take this out, I'm just testing styles and what works and what doesn't*/
-    @media screen and (min-width: 0px) and (max-width: 919px) {
-
-     .container {
-        width: 800px;
-        margin: 0 auto;
-     }
-    
-     .row {
-        margin-left:-5px;
-    }
-    
-    .col {
-        border-left-width:12px;
-        padding:0 12px;
-    } 
-
-    .span_point_25 {
-            width: 2.0833333334%;
-        }
-
-        .span_point_5 {
-            width:4.1666666667%;
-        }
-
-        .span_1 {
-            width:25%;
-        }
-
-         .span_1_5, .spacer {
-            width: 37.5%;
-        }
-
-        .span_2{
-            width:16.6666666667%;
-        }
-
-        .span2_5 {
-            width: 62.5%;
-        }
-
-        .span_3,
-        .box_2,
-        .navigation,
-        .related_content {
-            width:75.0%; 
-        }
-
-        .span_4,
-        .media_block {
-            width:100%;
-        }
-
-        .span_5 {
-            width:41.6666666667%;
-        }
-
-        .span_6, 
-        .description,
-        .main-content {
-            width:50.0%;
-		}
-
-        .span_7 {
-            width:58.3333333334%;
-        }
-
-        .span_8 {
-            width:66.6666666667%;
-        }
-        
-        .span_9 {
-            width:75.0%;
-        }
-        
-        .span_10 {
-            width:83.3333333334%;
-        }
-        
-        .span_11 {
-            width:91.6666666667%;
-        }
-        
-        .span_12, 
-	    .header {
-	        margin-left:0;
-	        width:100%;
-        }
-
-}
 
     /* 2. 12 Column Grid 960px - Infinity 
     ----------------------------------------------------------------------------- 
@@ -238,12 +153,8 @@ the gridpak.js file to use '.page' as its container.
         .col {
             border-left-width:12px;
             padding:0 12px;
-        }
-
-        .container {
-            width: 920px;
-            margin: 0 auto;
-        }
+        } 
+        
         
         /*
         Add your semantic classnames in alongside their corresponding spans here. e.g.
@@ -254,15 +165,15 @@ the gridpak.js file to use '.page' as its container.
         }
         */
         .span_point_25 {
-            width: 4.35%;
+            width: 2.0833333334%;
         }
 
         .span_point_5 {
-            width:8.75%;
+            width:4.1666666667%;
         }
 
         .span_1 {
-            width:17.5%;
+            width:8.3333333334%;
         }
 
          .span_1_5, .spacer {
@@ -270,7 +181,7 @@ the gridpak.js file to use '.page' as its container.
         }
 
         .span_2{
-            width:25%;
+            width:16.6666666667%;
         }
 
         .span_2_3 {
@@ -285,42 +196,43 @@ the gridpak.js file to use '.page' as its container.
         .box_2,
         .navigation,
         .related_content {
-            width:37.5%; 
+            width:25.0%; 
         }
 
         .span_4,
         .media_block {
-            width:50%;
+            width:33.3333333334%;
         }
 
         .span_5 {
-            width:62.5%;
+            width:41.6666666667%;
         }
 
         .span_6, 
         .description,
-        .main-content {
-            width:75.0%;
+        .main-content,
+        .box_6 {
+            width:50.0%;
 		}
 
         .span_7 {
-            width:87.5%;
+            width:58.3333333334%;
         }
 
         .span_8 {
-            width:100%;
+            width:66.6666666667%;
         }
-  
+        
         .span_9 {
-            width:100%;
+            width:75.0%;
         }
         
         .span_10 {
-            width:100%;
+            width:83.3333333334%;
         }
         
         .span_11 {
-            width:100%;
+            width:91.6666666667%;
         }
         
         .span_12, 

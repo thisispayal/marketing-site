@@ -30,7 +30,7 @@
                         Take ImageShare for a spin
                     </div>
                     <div class="trial-subhead">
-                        <i>Start your <b>free</b> trial. No credit card required.</i>
+                        <i>Start your <b>free</b> 30-day trial. No credit card required.</i>
                     </div>
                 </div>
         <form>
@@ -102,7 +102,7 @@
                 </div>
                 <div class="span_2_5 col">
                     <select class="signup-field" tabindex="8" required>
-                        <option selected="selected" disabled>Select one</option>
+                        <option selected="selected" disabled>Please select</option>
                         <option>Web search</option>
                         <option>Sent image through ImageShare</option>
                         <option>Received image through ImageShare</option>
@@ -122,11 +122,9 @@
             </div>
             
             <div class="row">
-                <div class="span_2 col">&nbsp;</div>
                 <div class="span_8 col">
                     <a href="#" class="button submit_button">SUBMIT</a>
                 </div>
-                <div class="span_2">&nbsp;</div>
             </div>
 
         </form>
@@ -136,14 +134,14 @@
     <script src="../assets/js/jquery-1.10.2.js"></script>
     <script>
         $(document).ready(function(){
-            $(".signup-field").on("select", "#other", function(){
+            $(".signup-field").on("click", "#other", function(){
                 $("#other-row").show();
             });
 
             var inputWidth = { value: "" };
             var inputHeight = { value: "" };
             inputWidth.value = $("input").width();
-            inputHeight.value = $("input").height() + 5;
+            inputHeight.value = $("input").height()+5;
             $("select").css("width", inputWidth.value);
             $("select").css("height", inputHeight.value);
         });
