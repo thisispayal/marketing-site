@@ -146,7 +146,11 @@ the gridpak.js file to use '.page' as it's container.
     ----------------------------------------------------------------------------- */
 
     @media screen and (min-width: 920px) {
-        
+        .container {
+            width: 920px;
+            margin: 0 auto;
+        }
+
         .row {
             margin-left:-5px;
         }

@@ -31,7 +31,7 @@ the gridpak.js file to use '.page' as it's container.
 
 /* Reusable column setup */
 .col {
-    border:0px solid rgba(0,0,0,0);
+    border:0px solid rgb(0,0,0);
     float:left;
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
