@@ -114,7 +114,7 @@ ul {
     color: white;
     font-size: 22px;
     font-weight: 300;
-    background-color: rgba(86, 86, 86, .95);
+    background-color: rgba(39, 39, 39, .75);
     z-index: 10000;
 }
 
@@ -154,10 +154,13 @@ ul {
     color: rgb(8, 191, 250);
 }
 
+.nav{
+    margin-top: 50px;
+}
 
 /* Landing Page
 =========================================== */   
-.landing_page{ 
+.landing_page_image{ 
     background: url(../img/background_3.png);
     margin-top: -100px;
     height: 1300px;
@@ -165,6 +168,14 @@ ul {
     background-repeat: no-repeat;
 }
 
+.landing_page_text{
+    z-index:10;
+    color:white;
+    margin-top: -400px;
+    float:right;
+    margin-right: 100px;
+    font-weight: 600;
+}
 
 
 /* Testimonials
@@ -495,6 +506,13 @@ img#uses-image {
 .submit_button {
     float:right;
     background-color:#f76839;
+}
+
+
+/* Footer
+===========================================    */
+#madewithlove{
+    text-align: center;
 }
 
 /* Free Trial
