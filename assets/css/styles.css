@@ -282,6 +282,9 @@ img#uses-image {
 
 /* Features
 =========================================== */
+.feature-icon{
+	height: 100px;
+}
 .slider_icons li, .slider_descriptions li{
     display: inline;
     font-size: 20px;                
