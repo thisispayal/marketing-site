@@ -261,7 +261,7 @@ body.uses {
 img#uses-image {
     max-width:80%;
     max-height:80%;
-    text-align:center;
+	text-align:center;
 }
 
 .uses-description {
