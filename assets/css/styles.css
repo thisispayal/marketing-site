@@ -282,6 +282,9 @@ img#uses-image {
 
 /* Features
 =========================================== */
+.feature-icon{
+	height: 100px;
+}
 .slider_icons li, .slider_descriptions li{
     display: inline;
     font-size: 20px;                
@@ -352,7 +355,7 @@ img#uses-image {
 
 .support-circle {
     text-align: center;
-    width: 375px;
+    width: 450px;
 }
 
 /*Use for the descriptions. Even if they end up being different sizes, they should be the same proportion*/
@@ -544,7 +547,7 @@ img#uses-image {
     }
 
     .signup-field {
-        width: 100%;
+        width: 150%;
         height: 30px;
         border: 2px solid grey;
         margin-top: -5px;

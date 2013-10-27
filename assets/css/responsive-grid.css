@@ -122,7 +122,6 @@ the gridpak.js file to use '.page' as its container.
 
 
     /* grid for sign up form. NOTE: it's the same. take this out, I'm just testing styles and what works and what doesn't*/
-    @media screen and (min-width: 0px) and (max-width: 919px) {
 
      .container {
         width: 800px;
@@ -210,8 +209,6 @@ the gridpak.js file to use '.page' as its container.
 	        width:100%;
         }
 
-}
-
     /* 2. 12 Column Grid 960px - Infinity 
     ----------------------------------------------------------------------------- 
     
@@ -230,102 +227,4 @@ the gridpak.js file to use '.page' as its container.
     
     ----------------------------------------------------------------------------- */
 
-    @media screen and (min-width: 920px) {
-        
-        .row {
-            margin-left:-5px;
-        }
-        .col {
-            border-left-width:12px;
-            padding:0 12px;
-        }
-
-        .container {
-            width: 920px;
-            margin: 0 auto;
-        }
-        
-        /*
-        Add your semantic classnames in alongside their corresponding spans here. e.g.
-        
-        .span_3,
-        .my_semantic_class_name {
-            ...
-        }
-        */
-        .span_point_25 {
-            width: 4.35%;
-        }
-
-        .span_point_5 {
-            width:8.75%;
-        }
-
-        .span_1 {
-            width:17.5%;
-        }
-
-         .span_1_5, .spacer {
-            width: 12.4999999999%;
-        }
-
-        .span_2{
-            width:25%;
-        }
-
-        .span_2_3 {
-            width: 19.4444444444%;
-        }
-
-        .span_2_5{
-            width: 20.8333333334%;
-        }
-
-        .span_3,
-        .box_2,
-        .navigation,
-        .related_content {
-            width:37.5%; 
-        }
-
-        .span_4,
-        .media_block {
-            width:50%;
-        }
-
-        .span_5 {
-            width:62.5%;
-        }
-
-        .span_6, 
-        .description,
-        .main-content {
-            width:75.0%;
-		}
-
-        .span_7 {
-            width:87.5%;
-        }
-
-        .span_8 {
-            width:100%;
-        }
-  
-        .span_9 {
-            width:100%;
-        }
-        
-        .span_10 {
-            width:100%;
-        }
-        
-        .span_11 {
-            width:100%;
-        }
-        
-        .span_12, 
-	    .header {
-	        margin-left:0;
-	        width:100%;
-        }
-    }
+   
