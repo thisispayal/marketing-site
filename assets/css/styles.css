@@ -161,7 +161,7 @@ ul {
 /* Landing Page
 =========================================== */   
 .landing_page_image{ 
-    background: url(../img/background_3.png);
+    background: url(../img/landingpage_web.gif);
     margin-top: -100px;
     height: 1300px;
     background-size: 100%;
@@ -261,7 +261,7 @@ body.uses {
 img#uses-image {
     max-width:80%;
     max-height:80%;
-    text-align:center;
+	text-align:center;
 }
 
 .uses-description {
@@ -327,6 +327,16 @@ img#uses-image {
 
 #next, #prev{
     cursor: pointer;
+}
+
+#features-body p{
+	font-weight: 300;
+	font-size: 120%;
+}
+
+.features-title{
+	font-weight:300;
+	font-size:150%;
 }
 
 /* Support
