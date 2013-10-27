@@ -329,6 +329,16 @@ img#uses-image {
     cursor: pointer;
 }
 
+#features-body p{
+	font-weight: 300;
+	font-size: 120%;
+}
+
+.features-title{
+	font-weight:300;
+	font-size:150%;
+}
+
 /* Support
 =========================================== */
 /*Use for the section heading formatting*/
