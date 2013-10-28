@@ -524,6 +524,9 @@ img#uses-image {
 
 /* Footer
 ===========================================    */
+.footer IMG {
+    width: 100%;
+}
 #madewithlove{
     text-align: center;
 }
