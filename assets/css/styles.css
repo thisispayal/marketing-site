@@ -531,6 +531,11 @@ img#uses-image {
     text-align: center;
 }
 
+/*Chrome Frame article*/
+.google-chrome{
+    font-weight:300;
+}
+
 /* Free Trial
 =========================================== */
 .container {
