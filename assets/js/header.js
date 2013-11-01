@@ -37,7 +37,8 @@ $(document).ready(function () {
         || window.location.hash != "#features" || window.location.hash != "#support" ||
         window.location.hash != "#pricing" || window.location.hash != "#about_us" ||
         window.location.hash != "#contact") {
-	setHash("home");
+        setHash("home");
+        console.log("hello");
     }
 	landing = $('.landing_page').height() + $('.testimonials').height() - 200
 	overview = landing + $('.overview').height() + 400 //for some reason overview height is smaller than it should be
