@@ -33,11 +33,14 @@ function unSelect(){
 
 $(document).ready(function () {
     var thisHash = window.location.hash;
+    var hashLength = thisHash.length;
+    thisHash = thisHash.substring(1, hashLength);
 
-    if (thisHash == "#overview" || thisHash == "#uses"
-        || thisHash == "#features" || thisHash != "#support" ||
-        thisHash != "#pricing" ||thisHash != "#about_us" ||
-        thisHash != "#contact") {
+
+    if (thisHash == "overview" || thisHash == "uses"
+        || thisHash == "features" || thisHash != "support" ||
+        thisHash != "pricing" ||thisHash != "about_us" ||
+        thisHash != "contact") {
         setHash(thisHash);
         console.log("hello");
     } else {
