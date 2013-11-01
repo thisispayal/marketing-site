@@ -532,7 +532,7 @@ img#uses-image {
 }
 
 /*Chrome Frame article*/
-.google-chrome{
+.google-chrome.page{
     font-weight:300;
 }
 

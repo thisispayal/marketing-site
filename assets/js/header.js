@@ -19,7 +19,6 @@ function setHash(value){
 }
 
 
-
 function unSelect(){
 	$(last).removeAttr('style');
 	$('#overview_link').removeAttr('style');
@@ -32,8 +31,22 @@ function unSelect(){
 }
 
 
-$(document).ready(function() {
-	setHash("home");
+$(document).ready(function () {
+    var thisHash = window.location.hash;
+    var hashLength = thisHash.length;
+    thisHash = thisHash.substring(1, hashLength);
+
+
+    if (thisHash == "overview" || thisHash == "uses"
+        || thisHash == "features" || thisHash != "support" ||
+        thisHash != "pricing" ||thisHash != "about_us" ||
+        thisHash != "contact") {
+        setHash(thisHash);
+        console.log("hello");
+    } else {
+        setHash("home");
+    }
+
 	landing = $('.landing_page').height() + $('.testimonials').height() - 200
 	overview = landing + $('.overview').height() + 400 //for some reason overview height is smaller than it should be
 	uses = overview + $('.uses').height()
