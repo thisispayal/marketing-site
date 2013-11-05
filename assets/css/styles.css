@@ -225,6 +225,10 @@ ul {
     width: 90%;
 }
 
+.videoplayer{
+    text-align:center;
+}
+
 /* Overview
 =========================================== */
 .overview-image {
