@@ -10,4 +10,12 @@ $(document).ready(function () {
     inputHeight.value = $("input").height() + 5;
     $("select").css("width", inputWidth.value);
     $("select").css("height", inputHeight.value);
+
+    $(".slide").css("height", $(".testimonials").height()*.9);
+
+    $(window).resize(function () {
+        //resizing testimonials
+        $(".slide").css("height", $(".testimonials").height()*.9);
+    })
+
 });
