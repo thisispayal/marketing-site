@@ -196,7 +196,7 @@ ul {
 }
 
 .slide{
-    height: 250px;
+    height: 150%;
     overflow: hidden;
 }
 .slide img{
