@@ -4,12 +4,12 @@ Consider other options.
 */
 
 $(document).ready(function () {
-    var inputWidth = { value: "" };
+   /* var inputWidth = { value: "" };
     var inputHeight = { value: "" };
     inputWidth.value = $("input").width();
     inputHeight.value = $("input").height() + 5;
     $("select").css("width", inputWidth.value);
-    $("select").css("height", inputHeight.value);
+    $("select").css("height", inputHeight.value); */
 
     $(".slide").css("height", $(".testimonials").height()*.9);
 
