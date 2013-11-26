@@ -1,6 +1,6 @@
 <?php
 
-require_once('Sitemap-github.php');
+require_once('sitemap.php');
 
 $m = new Sitemap('http://www.vigilantmedical.net');
 $m->setPath('./');
