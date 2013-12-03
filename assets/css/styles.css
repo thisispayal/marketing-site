@@ -59,7 +59,7 @@ a:hover{
 
 blockquote {
     font-weight:300;
-    font-size: 150%;
+    font-size: 25px;
 }
 
 /* This offsets anchor location to compensate for the header height, if header height changes this must be adjusted */
@@ -109,7 +109,7 @@ ul {
 .container{
     margin-left: auto;
     margin-right: auto;
-    min-width: 765px;
+    min-width: 960px;
     *zoom:1;
 }
 
@@ -180,10 +180,19 @@ ul {
 =========================================== */   
 .landing_page_image{ 
     background: url(../img/landingpage_web.gif);
-    margin-top: -100px;
+    background-position: 0% 0px;
     height: 1300px;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    width: 100%;
+    position:relative;
+    overflow: hidden;
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    margin-top: -100px;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 1;
 }
 
 .landing_page_text{
@@ -193,6 +202,7 @@ ul {
     float:right;
     margin-right: 100px;
     font-weight: 600;
+    position: relative;
 }
 
 
