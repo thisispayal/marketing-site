@@ -179,10 +179,10 @@ ul {
 /* Landing Page
 =========================================== */   
 .landing_page_image{ 
-    background: url(../img/landingpage_web.gif);
+    background: url(../img/landingpage_web.gif) center top;
     margin-top: -100px;
-    height: 1300px;
-    background-size: 100%;
+    height: 838px;
+    /* background-size: 100%; */
     background-repeat: no-repeat;
 }
 
