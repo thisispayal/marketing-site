@@ -24,7 +24,6 @@ the gridpak.js file to use '.page' as it's container.
 */
 .page {
      margin: 0 auto;
-     max-width: 95%;
      overflow:hidden;
      position:relative;
 }
@@ -65,9 +64,9 @@ the gridpak.js file to use '.page' as it's container.
     @media screen and (min-width: 0px) and (max-width: 959px) {
         
         .col {
-            margin-left:200%;
-            margin-right:2%;
-            padding:0 2%;
+            margin-left:20px;
+            margin-right:.2px;
+            padding:0 .2px;
         }
         
         .row .col:first-child {
