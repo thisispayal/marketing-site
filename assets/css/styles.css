@@ -209,7 +209,7 @@ ul {
     background-size: 110%;
     color: white;
     overflow: hidden;
-    margin-top: -12%;
+    margin-top: -20px;
     padding-bottom: 25px;
     z-index:4;
 }
@@ -223,19 +223,29 @@ ul {
     padding-bottom: 5%;
     padding-right: 10%;
     float: left;
+    width: 125px;
+}
+
+blockquote{
+    font-size:20px;
+}
+
+.source{
+    float:right;
 }
 
 .caption{
     overflow: auto;
+    width: 520px;
 }
 
 .name{
     font-weight: 600;
-    font-size: 30px;
+    font-size: 18px;
     font-style: oblique; 
 }
 .title{
-    font-size: 25px;
+    font-size: 18px;
     font-style: oblique;
     color: #48bffa;
 }
@@ -248,13 +258,14 @@ ul {
     text-align:center;
 }
 
+
 /* Overview
 =========================================== */
 .overview-image {
-    /*TODO: formatting and lining up with descriptions*/
+    width: 250px;
 }
 .section-subheading {
-    font-size: 250%;
+    font-size: 20px;
     margin-bottom: 5%;
     color: #3085af;
     text-align: center;
@@ -262,7 +273,7 @@ ul {
 
 .section-subbody {
     font-weight: 300;
-    font-size: 120%;
+    font-size: 12px;
     margin-bottom: 5%;
     text-align: center;
 }
@@ -290,7 +301,7 @@ img#uses-image {
 .uses-description {
     font-weight: 300;
     padding-top: 1.5%;
-    font-size:150%;
+    font-size:15px;
     padding-bottom:1.5%;
 }
 
@@ -300,7 +311,7 @@ img#uses-image {
 
 .uses-subdescriptions {
     font-weight: 300;
-    font-size:120%;
+    font-size:12px;
 }
 
 /* Features
@@ -374,7 +385,7 @@ img#uses-image {
     font-size:60px;
 }
 .heading_3 {
-    font-size:28px;
+    font-size:18px;
 }
 
 /*Use for the two box page*/
@@ -498,7 +509,7 @@ img#uses-image {
 
 .header_black{
     text-align: center;
-    font-size: 100px;
+    font-size: 60px;
     color: black;
     margin-bottom: 2%;
 }
