@@ -179,20 +179,11 @@ ul {
 /* Landing Page
 =========================================== */   
 .landing_page_image{ 
-    background: url(../img/landingpage_web.gif);
-    background-position: 0% 0px;
-    height: 1300px;
-    width: 100%;
-    position:relative;
-    overflow: hidden;
-    text-align: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: url(../img/landingpage_web.gif) center top;
     margin-top: -100px;
-    margin-right: auto;
-    margin-left: auto;
-    z-index: 1;
+    height: 838px;
+    /* background-size: 100%; */
+    background-repeat: no-repeat;
 }
 
 .landing_page_text{
