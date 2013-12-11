@@ -55,11 +55,21 @@
                     window.parent.document.body.style.zoom = ((userWindow) * .75) / 1740;
                 };
 
+                function pricingSizer() {
+                    var heightAccount = $("#account-box").height();
+                    var heightFlatFee = $("#flatfee-box").height();
+                    var heightStudy = $("#study-box").height();
+                    heightPricingCol = Math.max(heightAccount, heightFlatFee, heightStudy);
+                    $(".pricing_details").css("height", heightPricingCol);
+                };
+
                 windowResizer();
+                pricingSizer();
 
                 $(window).resize(function () {
                     windowResizer();
                 });
+
             });
         </script>
 
@@ -534,7 +544,7 @@
                                 Study
                             </div>
 
-                            <div class="pricing_details opaque">
+                            <div class="pricing_details opaque" id="study-box">
                                 <ul>
                                     <li>Pay for each study uploaded to the site</li>
                                     <li>Monthly or quarterly billing</li>
@@ -554,7 +564,7 @@
                             <div class="pricing_option" id="account">
                                 Account
                             </div>
-                            <div class="pricing_details opaque">
+                            <div class="pricing_details opaque" id="account-box">
                                 <ul>
                                     <li>License fee based on number of users</li>
                                     <li>Monthly or quarterly billing</li>
@@ -573,7 +583,7 @@
                             <div class="pricing_option" id="flat">
                                 Flat Fee
                             </div>
-                            <div class="pricing_details opaque">
+                            <div class="pricing_details opaque" id="flatfee-box">
                                 <ul>
                                     <li>Flat subscription fee</li>
                                     <li>Annual, quarterly, or monthly billing</li>
@@ -606,7 +616,7 @@
                         <div class="span_2 col">
                             &nbsp;
                         </div>
-                        <div class="span_5 col text_box">
+                        <div class="span_4 col text_box">
                             <p class="about">
                                 <b>At Vigilant Medical,</b> our mission is to improve patient care, save physicians' time,
                                 and lower overall healthcare costs.
@@ -627,7 +637,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="span_3 col text_box">
+                        <div class="span_4 col text_box">
                             <h1><i>Our Story:</i></h1>
                             <div id="story">
                                 <p>
@@ -664,7 +674,7 @@
                         <div class="span_2 col">
                             &nbsp;
                         </div>
-                        <div class="span_5 col message">
+                        <div class="span_4 col message">
                             <p>
                                 We would love you speak with you. Sign up to learn more about how you can use ImageShare to enhance your image transfer
                                 experience.
@@ -680,7 +690,7 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="span_3 col contact_box">
+                        <div class="span_4 col contact_box">
                             <ul class="contact_methods">
                                 <li>
                                     <ul class="office">
