@@ -106,6 +106,24 @@ ul {
     *zoom: 1;
 }
 
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 765px;
+    *zoom:1;
+}
+
+.container:before,
+.container:after{
+    display:table;
+    content: "";
+    line-height:0;
+}
+
+.container:after{
+    clear:both;
+}
+
 /* Site Header
 =========================================== */
 .site_header {
@@ -163,7 +181,7 @@ ul {
 .landing_page_image{ 
     background: url(../img/landingpage_web.gif);
     margin-top: -100px;
-    height: 1300px;
+    height: 1500px;
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -171,19 +189,16 @@ ul {
 .landing_page_text{
     z-index:10;
     color:white;
-    margin-top: -400px;
+    margin-bottom: -400px;
     float:right;
     margin-right: 100px;
     font-weight: 600;
+    margin-top: -140px;
 }
 
 
 /* Testimonials
 =========================================== */
-.testimonial_slider{
-    table-layout: fixed;
-}
-
 .testimonials{
     background-color:black;
     background-repeat:no-repeat;
@@ -196,7 +211,7 @@ ul {
 }
 
 .slide{
-    height: 150%;
+    height: 250px;
     overflow: hidden;
 }
 .slide img{
@@ -542,7 +557,7 @@ img#uses-image {
 
 /* Free Trial
 =========================================== */
-.container {
+.trial-container {
     margin-left: 16.6666666667%;
     margin-right: 16.6666666667%;
 }
