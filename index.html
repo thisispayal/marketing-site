@@ -41,13 +41,27 @@
         <script src="assets/js/header.js"></script>
         <script src="assets/js/smooth_scroll.js"></script>
         <script src="assets/js/modernizr.js"></script>
-        <script src="assets/js/style.js"></script>
 
         <!--[if !(lt IE 9)]>
         <script>
             window.location = "http://ie.vigilantmedical.net";
         </script>
         <![endif]-->
+
+        <script>
+            $(document).ready(function(){
+                function windowResizer() {
+                    userWindow = $(window).width();
+                    window.parent.document.body.style.zoom = ((userWindow) * .75) / 1740;
+                };
+
+                windowResizer();
+
+                $(window).resize(function () {
+                    windowResizer();
+                });
+            });
+        </script>
 
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic, 400italic,600italic,700italic800italic,400,300,700,600,800' rel='stylesheet' type='text/css' />
@@ -97,14 +111,14 @@
                     </div>
                     <div class="row">
                         <div class="span_12 col">
-                            <h1 class="landing_page_text"><i>an efficient, smart, and secure medical image sharing service</i></h1>
+                            <h1 class="landing_page_text" style="margin-top:-140px;"><i>an efficient, smart, and secure medical image sharing service</i></h1>
                         </div>
                     </div>
                 </div>
 
 
                 <!-- Testimonials -->
-                <div class="testimonials">
+                <div class="testimonials" style="position:relative; top:-15px;">
                     <table class="testimonial_slider">
                         <tr>
                             <td class="arrows"><img src="assets/img/left_arrow.png" id="prev_testimonials" alt="<"></td>
