@@ -47,14 +47,18 @@ $(document).ready(function () {
         setHash("home");
     }
 
-	landing = $('.landing_page').height() + $('.testimonials').height() - 200
-	overview = landing + $('.overview').height() + 400 //for some reason overview height is smaller than it should be
-	uses = overview + $('.uses').height()
-	features = uses + $('.features').height()
-	support = features + $('.support').height()
-	pricing = support + $('.pricing').height()
-	about_us = pricing + $('.about_us').height()
-	contact = about_us
+    zoom = parseFloat($("body").css("zoom"));
+
+    landing = $('.landing_page').height()*zoom + $('.testimonials').height()*zoom; //-200
+    overview = landing + $('.overview').height()*zoom; //for some reason overview height is smaller than it should be
+    uses = overview + $('.uses').height()*zoom;
+    features = uses + $('.features').height()*zoom;
+    support = features + $('.support').height()*zoom;
+    pricing = support + $('.pricing').height()*zoom;
+    about_us = pricing + $('.about_us').height()*zoom;
+    contact = about_us*zoom;
+
+    console.log(landing + "<landing" + overview + "<overview" + uses + "<uses" + features + "<features" + support + "<support"+ pricing + "<pricing" + about_us + "<about us" + contact + "<contact")
 
 	$("a.anchor_link").click(function(){
 	unSelect();
@@ -100,7 +104,8 @@ else if (value < 120 && header_image != "vigilant"){
 	 if (value >= uses && value < features & set!= "features" && scrolling == false){  
 	 	setHash("features");	
    		unSelect();
-   		$('#features_link').css('border-bottom', '5px solid white')   		
+   		$('#features_link').css('border-bottom', '5px solid white')
+   		console.log($(".features").offset().top);
 	}
 	if (value >= features && value < support & set != "support" && scrolling == false){
 		setHash("support");
