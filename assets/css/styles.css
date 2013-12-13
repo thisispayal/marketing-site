@@ -207,6 +207,10 @@ ul {
 
 /* Testimonials
 =========================================== */
+.testimonials_slider{
+    table-layout:fixed;
+}
+
 .testimonials{
     background-color:black;
     background-repeat:no-repeat;

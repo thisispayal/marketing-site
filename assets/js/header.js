@@ -48,16 +48,24 @@ $(document).ready(function () {
     }
 
     zoom = parseFloat($("body").css("zoom"));
+    console.log(zoom);
 
-    landing = $('.landing_page').height()*zoom + $('.testimonials').height()*zoom; //-200
-    overview = landing + $('.overview').height()*zoom; //for some reason overview height is smaller than it should be
-    uses = overview + $('.uses').height()*zoom;
-    features = uses + $('.features').height()*zoom;
-    support = features + $('.support').height()*zoom;
-    pricing = support + $('.pricing').height()*zoom;
-    about_us = pricing + $('.about_us').height()*zoom;
+    landing = $('.landing_page').height() * zoom + $('.testimonials').height() * zoom; //-200
+    console.log(landing);
+    overview = landing + $('.overview').height() * zoom; //for some reason overview height is smaller than it should be
+    console.log(overview);
+    uses = overview + $('.uses').height() * zoom + 308*zoom;
+    console.log(uses);
+    features = uses + $('.features').height() * zoom;
+    console.log(features);
+    support = features + $('.support').height() * zoom;
+    console.log(support);
+    pricing = support + $('.pricing').height() * zoom;
+    console.log(pricing);
+    about_us = pricing + $('.about_us').height() * zoom;
+    console.log(about_us)
     contact = about_us*zoom;
-
+    console.log(contact);
     console.log(landing + "<landing" + overview + "<overview" + uses + "<uses" + features + "<features" + support + "<support"+ pricing + "<pricing" + about_us + "<about us" + contact + "<contact")
 
 	$("a.anchor_link").click(function(){
