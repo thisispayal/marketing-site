@@ -52,70 +52,77 @@ $(document).ready(function () {
         setHash("home");
     }
 
-	landing = $('.landing_page').height() + $('.testimonials').height() - 200
-	overview = landing + $('.overview').height() + 400 //for some reason overview height is smaller than it should be
-	uses = overview + $('.uses').height()
-	features = uses + $('.features').height()
-	support = features + $('.support').height()
-	pricing = support + $('.pricing').height()
-	about_us = pricing + $('.about_us').height()
-	contact = about_us
-
-	$("a.anchor_link").click(function(){
-	unSelect();
-	})
+    /* GLOBAL VARIABLES? IS THAT NECESSARY?
+    landing = $('.landing_page').height() + $('.testimonials').height() - 200
+    overview = landing + $('.overview').height() + 400 //for some reason overview height is smaller than it should be
+    uses = overview + $('.uses').height()
+    features = uses + $('.features').height()
+    support = features + $('.support').height()
+    pricing = support + $('.pricing').height()
+    about_us = pricing + $('.about_us').height()
+    contact = about_us*/
+    //Set these values to be the position where the section header sits just under the site nav header.
+    var headerHeight = $('.site_header').height();
+    var overview = $('.overview').offset().top - headerHeight;
+    var uses = $('.uses').offset().top - headerHeight;
+    var features = $('.features').offset().top - headerHeight;
+    var support = $('.support').offset().top - headerHeight;
+    var pricing = $('.pricing').offset().top - headerHeight;
+    var about_us = $('.about_us').offset().top - headerHeight;
+    var contact = $('.contac').ofset().top - headerHeight;
 	
-});
+    $("a.anchor_link").click(function(){
+      unSelect();
+    });
 
-
-$(window).scroll( function() {
-   var value = $(this).scrollTop();
-if (value > 120 && header_image != "imageshare"){
-    header_image = "imageshare";
+    $(window).scroll( function() {
+      var value = $(this).scrollTop();
+      if (value > 120 && header_image != "imageshare"){
+        header_image = "imageshare";
         $('#vigilant').fadeOut(600);
         $('#vigilant').hide();
-		$('#imageshare').fadeIn(600);
-}
-
-else if (value < 120 && header_image != "vigilant"){
+	$('#imageshare').fadeIn(600);
+      } else if (value < 120 && header_image != "vigilant"){
 	header_image = "vigilant";
 	$('#imageshare').fadeOut('600');
 	$('#imageshare').hide();
 	$('#vigilant').fadeIn('600');
-}
+      }
 
-    if(scrolling == false){
-	if (value < landing && set != "home"){
-		setHash("home");
-		unSelect();
+      if(scrolling == false){
+	if (value < overview && set != "home"){
+	  setHash("home");
+          unSelect();
 	}
-	else if (value >= landing && value < overview && set != "overview"){
-		setHash("overview");
-   		setSelected($('#overview_link'));  
+	else if (value >= overview && value < uses && set != "overview"){
+	  setHash("overview");
+   	  setSelected($('#overview_link'));  
 	}
-        else if (value >= overview && value < uses && set != "uses"){ 
-    		setHash("uses");
-   		setSelected($('#uses_link'));
+        else if (value >= uses && value < features && set != "uses"){ 
+    	  setHash("uses");
+   	  setSelected($('#uses_link'));
 	}
-	else if (value >= uses && value < features && set!= "features"){  
-	 	setHash("features");	
-   		setSelected($('#features_link'));
+	else if (value >= features && value < support && set!= "features"){  
+	  setHash("features");	
+   	  setSelected($('#features_link'));
 	}
-	else if (value >= features && value < support && set != "support"){
-		setHash("support");
-		setSelected($('#support_link'));
+	else if (value >= support && value < pricing && set != "support"){
+	  setHash("support");
+	  setSelected($('#support_link'));
 	}
-	else if (value >= support && value < pricing && set != "pricing"){
-		setHash("pricing");
-		setSelected($('#pricing_link'));
+	else if (value >= pricing && value < about_us && set != "pricing"){
+	  setHash("pricing");
+	  setSelected($('#pricing_link'));
 	}
-	else if (value >= pricing && value < about_us && set != "about_us"){
-		setHash("about_us");
-		setSelected($('#about_us_link'));
+	else if (value >= about_us && value < contact && set != "about_us"){
+	  setHash("about_us");
+	  setSelected($('#about_us_link'));
 	}
 	else if (value >= contact && set != "contact"){
-		setHash("contact");
-		setSelected($('#contact_link'));
+	  setHash("contact");
+	  setSelected($('#contact_link'));
 	}
     }
+  });	
 });
+
