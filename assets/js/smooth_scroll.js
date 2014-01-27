@@ -19,11 +19,12 @@ jQuery.fn.anchorAnimate = function(settings) {
     $(caller).click(function (event) {  
       event.preventDefault();
       var locationHref = window.location.href;
-      var elementClick = $(caller).attr("href").replace("#",".");
+      var elementHash = $(caller).attr("href");
+      var elementClick = elementHash.replace("#",".");
       scrolling = true;
       var destination = $(elementClick).offset().top - $('.site_header').height(); //want the top of the div to sit under the header
       $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination}, settings.speed, function() {
-         window.location.hash = elementClick;
+         window.location.hash = elementHash;
          scrolling = false;
          last = caller;
       });
