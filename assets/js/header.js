@@ -69,7 +69,7 @@ $(document).ready(function () {
     var support = $('.support').offset().top - headerHeight;
     var pricing = $('.pricing').offset().top - headerHeight;
     var about_us = $('.about_us').offset().top - headerHeight;
-    var contact = $('.contac').ofset().top - headerHeight;
+    var contact = $('.contac').offset().top - headerHeight;
 	
     $("a.anchor_link").click(function(){
       unSelect();
