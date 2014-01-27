@@ -1,4 +1,4 @@
-var scrolling = false;
+var scrolling = false; //a global variable used to communicate to another JS module. Bad, but it stays for now.
 var last = null;
 $(document).ready(function(){
   
@@ -15,17 +15,16 @@ jQuery.fn.anchorAnimate = function(settings) {
   
   return this.each(function(){
     $(last).removeAttr('style');
-    var caller = this
+    var caller = this;
     $(caller).click(function (event) {  
-      event.preventDefault()
-      var locationHref = window.location.href
-      var elementClick = $(caller).attr("href")
+      event.preventDefault();
+      var locationHref = window.location.href;
+      var elementClick = $(caller).attr("href").replace("#",".");
       scrolling = true;
-      var destination = $(elementClick).offset().top;
+      var destination = $(elementClick).offset().top - $('.site_header').height(); //want the top of the div to sit under the header
       $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination}, settings.speed, function() {
-        window.location.hash = elementClick
+         window.location.hash = elementClick;
          scrolling = false;
-         $(caller).css('border-bottom', '5px solid white')
          last = caller;
       });
         return false;
