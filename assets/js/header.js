@@ -30,6 +30,11 @@ function unSelect(){
 	$('#contact_link').removeAttr('style');
 }
 
+ 
+function setSelected(selector){
+	unSelect();
+	selector.css('border-bottom', '5px solid white');
+}
 
 $(document).ready(function () {
     var thisHash = window.location.hash;
@@ -61,7 +66,6 @@ $(document).ready(function () {
 	})
 	
 });
- 
 
 
 $(window).scroll( function() {
@@ -80,49 +84,38 @@ else if (value < 120 && header_image != "vigilant"){
 	$('#vigilant').fadeIn('600');
 }
 
-
-	if (value < landing && set != "home" && scrolling == false){
+    if(scrolling == false){
+	if (value < landing && set != "home"){
 		setHash("home");
 		unSelect();
 	}
-	if (value >= landing && value < overview && set != "overview" && scrolling == false){
+	else if (value >= landing && value < overview && set != "overview"){
 		setHash("overview");
-   		unSelect();
-   		$('#overview_link').css('border-bottom', '5px solid white')   
+   		setSelected($('#overview_link'));  
 	}
-  
-    if (value >= overview && value < uses && set != "uses" && scrolling == false){ 
-    	setHash("uses");
-   		unSelect();
-   		$('#uses_link').css('border-bottom', '5px solid white')   
-   		
+        else if (value >= overview && value < uses && set != "uses"){ 
+    		setHash("uses");
+   		setSelected($('#uses_link'));
 	}
-	 if (value >= uses && value < features && set!= "features" && scrolling == false){  
+	else if (value >= uses && value < features && set!= "features"){  
 	 	setHash("features");	
-   		unSelect();
-   		$('#features_link').css('border-bottom', '5px solid white')   		
+   		setSelected($('#features_link'));
 	}
-	if (value >= features && value < support && set != "support" && scrolling == false){
+	else if (value >= features && value < support && set != "support"){
 		setHash("support");
-		unSelect();
-		$('#support_link').css('border-bottom', '5px solid white')
+		setSelected($('#support_link'));
 	}
-	if (value >= support && value < pricing && set != "pricing" && scrolling == false){
+	else if (value >= support && value < pricing && set != "pricing"){
 		setHash("pricing");
-		unSelect();
-		$('#pricing_link').css('border-bottom', '5px solid white')
+		setSelected($('#pricing_link'));
 	}
-	if (value >= pricing && value < about_us && set != "about_us" && scrolling == false){
+	else if (value >= pricing && value < about_us && set != "about_us"){
 		setHash("about_us");
-		unSelect();
-		$('#about_us_link').css('border-bottom', '5px solid white')
+		setSelected($('#about_us_link'));
 	}
-	if (value >= contact && set != "contact" && scrolling == false){
+	else if (value >= contact && set != "contact"){
 		setHash("contact");
-		unSelect();
-		$('#contact_link').css('border-bottom', '5px solid white')
+		setSelected($('#contact_link'));
 	}
-
-	
-
+    }
 });
