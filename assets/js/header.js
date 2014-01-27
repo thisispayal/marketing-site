@@ -97,12 +97,12 @@ else if (value < 120 && header_image != "vigilant"){
    		$('#uses_link').css('border-bottom', '5px solid white')   
    		
 	}
-	 if (value >= uses && value < features & set!= "features" && scrolling == false){  
+	 if (value >= uses && value < features && set!= "features" && scrolling == false){  
 	 	setHash("features");	
    		unSelect();
    		$('#features_link').css('border-bottom', '5px solid white')   		
 	}
-	if (value >= features && value < support & set != "support" && scrolling == false){
+	if (value >= features && value < support && set != "support" && scrolling == false){
 		setHash("support");
 		unSelect();
 		$('#support_link').css('border-bottom', '5px solid white')
