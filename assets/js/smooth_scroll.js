@@ -2,7 +2,7 @@ var scrolling = false; //a global variable used to communicate to another JS mod
 var last = null;
 $(document).ready(function(){
   
-  $("a.anchor_link").anchorAnimate()
+ // $("a.anchor_link").anchorAnimate()
 
  
 });
