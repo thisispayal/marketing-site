@@ -30,6 +30,11 @@ function unSelect(){
 	$('#contact_link').removeAttr('style');
 }
 
+ 
+function setSelected(selector){
+	unSelect();
+	selector.css('border-bottom', '5px solid white');
+}
 
 $(document).ready(function () {
     var thisHash = window.location.hash;
@@ -47,95 +52,77 @@ $(document).ready(function () {
         setHash("home");
     }
 
-    zoom = parseFloat($("body").css("zoom"));
-    console.log(zoom);
-
-    landing = $('.landing_page').height() * zoom + $('.testimonials').height() * zoom; //-200
-    console.log(landing);
-    overview = landing + $('.overview').height() * zoom; //for some reason overview height is smaller than it should be
-    console.log(overview);
-    uses = overview + $('.uses').height() * zoom + 308*zoom;
-    console.log(uses);
-    features = uses + $('.features').height() * zoom;
-    console.log(features);
-    support = features + $('.support').height() * zoom;
-    console.log(support);
-    pricing = support + $('.pricing').height() * zoom;
-    console.log(pricing);
-    about_us = pricing + $('.about_us').height() * zoom;
-    console.log(about_us)
-    contact = about_us*zoom;
-    console.log(contact);
-    console.log(landing + "<landing" + overview + "<overview" + uses + "<uses" + features + "<features" + support + "<support"+ pricing + "<pricing" + about_us + "<about us" + contact + "<contact")
-
-	$("a.anchor_link").click(function(){
-	unSelect();
-	})
+    /* GLOBAL VARIABLES? IS THAT NECESSARY?
+    landing = $('.landing_page').height() + $('.testimonials').height() - 200
+    overview = landing + $('.overview').height() + 400 //for some reason overview height is smaller than it should be
+    uses = overview + $('.uses').height()
+    features = uses + $('.features').height()
+    support = features + $('.support').height()
+    pricing = support + $('.pricing').height()
+    about_us = pricing + $('.about_us').height()
+    contact = about_us*/
+    //Set these values to be the position where the section header sits just under the site nav header.
+    var headerHeight = $('.site_header').height();
+    var overview = $('.overview').offset().top - headerHeight;
+    var uses = $('.uses').offset().top - headerHeight;
+    var features = $('.features').offset().top - headerHeight;
+    var support = $('.support').offset().top - headerHeight;
+    var pricing = $('.pricing').offset().top - headerHeight;
+    var about_us = $('.about_us').offset().top - headerHeight;
+    var contact = $('div.contact').offset().top - headerHeight;
 	
-});
- 
+    $("a.anchor_link").click(function(){
+      unSelect();
+    });
 
-
-$(window).scroll( function() {
-   var value = $(this).scrollTop();
-if (value > 120 && header_image != "imageshare"){
-    header_image = "imageshare";
+    $(window).scroll( function() {
+      var value = $(this).scrollTop();
+      if (value > 120 && header_image != "imageshare"){
+        header_image = "imageshare";
         $('#vigilant').fadeOut(600);
         $('#vigilant').hide();
-		$('#imageshare').fadeIn(600);
-}
-
-else if (value < 120 && header_image != "vigilant"){
+	$('#imageshare').fadeIn(600);
+      } else if (value < 120 && header_image != "vigilant"){
 	header_image = "vigilant";
 	$('#imageshare').fadeOut('600');
 	$('#imageshare').hide();
 	$('#vigilant').fadeIn('600');
-}
+      }
 
-
-	if (value < landing && set != "home" && scrolling == false){
-		setHash("home");
-		unSelect();
+      if(scrolling == false){
+	if (value < overview && set != "home"){
+	  setHash("home");
+          unSelect();
 	}
-	if (value >= landing && value < overview && set != "overview" && scrolling == false){
-		setHash("overview");
-   		unSelect();
-   		$('#overview_link').css('border-bottom', '5px solid white')   
+	else if (value >= overview && value < uses && set != "overview"){
+	  setHash("overview");
+   	  setSelected($('#overview_link'));  
 	}
-  
-    if (value >= overview && value < uses && set != "uses" && scrolling == false){ 
-    	setHash("uses");
-   		unSelect();
-   		$('#uses_link').css('border-bottom', '5px solid white')   
-   		
+        else if (value >= uses && value < features && set != "uses"){ 
+    	  setHash("uses");
+   	  setSelected($('#uses_link'));
 	}
-	 if (value >= uses && value < features & set!= "features" && scrolling == false){  
-	 	setHash("features");	
-   		unSelect();
-   		$('#features_link').css('border-bottom', '5px solid white')
-   		console.log($(".features").offset().top);
+	else if (value >= features && value < support && set!= "features"){  
+	  setHash("features");	
+   	  setSelected($('#features_link'));
 	}
-	if (value >= features && value < support & set != "support" && scrolling == false){
-		setHash("support");
-		unSelect();
-		$('#support_link').css('border-bottom', '5px solid white')
+	else if (value >= support && value < pricing && set != "support"){
+	  setHash("support");
+	  setSelected($('#support_link'));
 	}
-	if (value >= support && value < pricing && set != "pricing" && scrolling == false){
-		setHash("pricing");
-		unSelect();
-		$('#pricing_link').css('border-bottom', '5px solid white')
+	else if (value >= pricing && value < about_us && set != "pricing"){
+	  setHash("pricing");
+	  setSelected($('#pricing_link'));
 	}
-	if (value >= pricing && value < about_us && set != "about_us" && scrolling == false){
-		setHash("about_us");
-		unSelect();
-		$('#about_us_link').css('border-bottom', '5px solid white')
+	else if (value >= about_us && value < contact && set != "about_us"){
+	  setHash("about_us");
+	  setSelected($('#about_us_link'));
 	}
-	if (value >= contact && set != "contact" && scrolling == false){
-		setHash("contact");
-		unSelect();
-		$('#contact_link').css('border-bottom', '5px solid white')
+	else if (value >= contact && set != "contact"){
+	  setHash("contact");
+	  setSelected($('#contact_link'));
 	}
-
-	
-
+    }
+  });	
 });
+
