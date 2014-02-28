@@ -138,6 +138,11 @@ ul {
     z-index: 10000;
 }
 
+.site_header a:hover{
+    color:#3085af;
+    font-weight: 400;
+}
+
 .site_header_contact{
     margin-right: 25px;
 }
@@ -202,6 +207,10 @@ ul {
 
 /* Testimonials
 =========================================== */
+.testimonials_slider{
+    table-layout:fixed;
+}
+
 .testimonials{
     background-color:black;
     background-repeat:no-repeat;
