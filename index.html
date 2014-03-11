@@ -48,7 +48,11 @@
         <![endif]-->
 
         <script>
-            $(document).ready(function(){
+            $(document).ready(function () {
+                if (navigator.appName == "Microsoft Internet Explorer") {
+                    window.location = "http://ie.vigilantmedical.net";
+                }
+
                 function windowResizer() {
                     userWindow = $(window).width();
                     window.parent.document.body.style.zoom = ((userWindow) * .75) / 1740;
@@ -142,7 +146,7 @@
                                             <div class="caption">
                                                 <blockquote>
                                                     <p>
-                                                        "LTIE10-Since MedStar Washington Hospital Center instituted ImageShare,
+                                                        "Try IE10-11JS-Since MedStar Washington Hospital Center instituted ImageShare,
                                                         it has consulted in more than <b>1,000 cases</b> with approximately
                                                         <b>200 facilities</b> world wide."
                                                     </p>
