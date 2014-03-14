@@ -36,6 +36,12 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+.pop-up{
+    text-align:center;
+    z-index: 10;
+    font-size: 120%;
+}
+
 .button{
     display:inline-block;
     color:#ffffff;
