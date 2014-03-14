@@ -41,14 +41,21 @@
         <script src="assets/js/smooth_scroll.js"></script>
         <script src="assets/js/modernizr.js"></script>
 
-        <!--[if !(lt IE 9)]>
+        <!--[if (lt IE 10)]>
         <script>
             window.location = "http://ie.vigilantmedical.net";
         </script>
         <![endif]-->
 
         <script>
-            $(document).ready(function(){
+            $(document).ready(function () {
+                if (navigator.userLanguage != null || navigator.userAgent.search("Firefox") >= 0) {
+                    $(".pop-up").show();
+                    $(".continue").click(function () {
+                        $(".pop-up").hide();
+                    });
+                }
+
                 function windowResizer() {
                     userWindow = $(window).width();
                     window.parent.document.body.style.zoom = ((userWindow) * .75) / 1740;
@@ -80,6 +87,13 @@
     </head>
 
     <body>
+        <div class="pop-up" hidden style="text-align: center; z-index:10;">This site is not optimized for your browser.
+        Please use <a href="http://www.google.com/chrome">Google Chrome</a>, 
+        <a href="http://support.apple.com/downloads/#safari">Safari</a>, 
+            <a href="http://whatbrowser.org/#top">or click here to find more information about browsers.</a>
+        <br /> Your viewing experience may be improved by widening your browser screen or zooming out.
+        <br />
+            <b><a class="continue">Continue Anyway &#10006;</a></b></div>
         <div class="container">
             <div class="site_header">
                 <div class="row">
@@ -273,7 +287,7 @@
                             <div class="section-subbody">
                                 Receive full DICOM imaging studies from anyone in the world without installing any software.
                                 ImageShare is entirely web-based, meaning all you need is a modern web-browser &#8212; such as IE,
-                                Chrome, or Safari. there's no software to install or hardware to purchase.
+                                Chrome, or Safari. There's no software to install or hardware to purchase.
                             </div>
                         </div>
                         <div class="span_2">
@@ -377,7 +391,7 @@
                         </div>
                         <div class="span_8 col uses-description">
                             ImageShare connects high acuity providers with those that rely on their expertise. No setup uploading allows anyone to send
-                            images with no software to install or accounts to create. Our secure portals helps providers from around the world communicate
+                            images with no software to install or accounts to create. Our secure portals help providers from around the world communicate
                             and deliver better patient care.
 
                         </div>
@@ -665,7 +679,7 @@
                             <div id="story">
                                 <p>
                                     Armed with our core set of values, we began to speak with as many physicians, specialists, and
-                                    surgeons as we could. After  consulting with some of the leading specialists in neurology and
+                                    surgeons as we could. After consulting with some of the leading specialists in neurology and
                                     interventional cardiology, we began developing our flagship product ImageShare.
                                 </p>
                                 <p>
