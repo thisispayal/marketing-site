@@ -49,7 +49,7 @@
 
         <script>
             $(document).ready(function () {
-                if (navigator.appName == "Microsoft Internet Explorer" || navigator.userAgent.search("Firefox") >= 0) {
+                if (navigator.userLanguage != null || navigator.userAgent.search("Firefox") >= 0) {
                     $(".pop-up").show();
                     $(".continue").click(function () {
                         $(".pop-up").hide();
