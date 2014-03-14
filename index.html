@@ -49,7 +49,7 @@
 
         <script>
             $(document).ready(function () {
-                if (navigator.appName == "Microsoft Internet Explorer" || navigator.appName == "Netscape") {
+                if (navigator.appName == "Microsoft Internet Explorer" || navigator.userAgent.search("Firefox") >= 0) {
                     $(".pop-up").show();
                     $(".continue").click(function () {
                         $(".pop-up").hide();
@@ -90,7 +90,7 @@
         <div class="pop-up" hidden style="text-align: center; z-index:10;">This site is not optimized for your browser.
         Please use <a href="http://www.google.com/chrome">Google Chrome</a>, 
         <a href="http://support.apple.com/downloads/#safari">Safari</a>, 
-            <a href="http://whatbrowser.org/#top">or click to find more information about browsers.</a>
+            <a href="http://whatbrowser.org/#top">or click here to find more information about browsers.</a>
         <br />
             <b><a class="continue">Continue Anyway &#10006;</a></b></div>
         <div class="container">
