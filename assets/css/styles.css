@@ -101,6 +101,10 @@ ul {
     list-style-type: none;
 }
 
+.img{
+    max-width: 100%;
+}
+
 /** Clearfix **/
 .cf:before, .cf:after { content: ""; display: table; }
 .cf:after { clear: both; }
