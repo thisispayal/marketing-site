@@ -162,9 +162,10 @@ ul {
 }
 
 .site_header img{
-    margin-left: 25px;
-    margin-top: 10px;
+    margin-left: 30px;
+    margin-top: 40px;
     float: left;
+    zoom:130%;
 }
 
 .trial_button {
