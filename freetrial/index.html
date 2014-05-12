@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META -->
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Vigilant Medical</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" media="all" type="text/css" href="../assets/css/styles.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="../assets/css/responsive-grid.css" />
+
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic, 400italic,600italic,700italic800italic,400,300,700,600,800' rel='stylesheet' type='text/css' />
+    
+    <!-- Javascript -->
+    <script src="../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".signup-field").on("click", "#other", function(){
+				$("#other-row").show();
+			});
+			
+			$("form").on("click", ".submit_button", function(){
+				var reqs = $("input[required]");
+				var notProvided = [];
+				for (reqIdx in reqs)
+				{
+					if (reqIdx == "length")
+						break;
+					var thisItem = $(reqs[reqIdx]);
+					if(thisItem && !thisItem.val())
+					{
+						notProvided.push(thisItem.attr("name"));
+					}
+				}
+				
+				if(notProvided.length > 0){
+					alert("The following required fields were not provided: \n" + notProvided.join("\n"));
+				}
+				else if ($("#Password").val() != $("#ConfirmPassword").val()){
+					alert("Passwords do not match. Please re-enter the password and confirmation.");
+				}
+				else{
+					$("form").submit();
+				}
+			});
+
+			var inputWidth = { value: "" };
+			var inputHeight = { value: "" };
+			inputWidth.value = $("input").width();
+			inputHeight.value = $("input").height()+5;
+			$("select").css("width", inputWidth.value);
+			$("select").css("height", inputHeight.value);
+		});
+	</script>
+	
+	<style>
+		.submit_button:hover {
+			background-color: orange;
+			cursor: pointer;
+		}
+		
+	</style>
+</head>
+
+<body class="trial-container">
+    <div class="signup page">
+                <div class="row">
+                    <div class="span_12 col trial-title">
+                        Take ImageShare for a spin
+                    </div>
+                    <div class="trial-subhead">
+                        <i>Start your <b>free</b> 30-day trial. No credit card required.</i>
+                    </div>
+                </div>
+        <form action="https://welcome.sharemedicalimages.com/SignUp/DoIt" method="POST">
+            <div class="row">
+
+                <div class="span_1_5 col">
+                    <div class="field-name">First Name <span class="required">*</span></div>
+                </div>
+                <div class="span_2_5 col">
+                    <input type="text" class="signup-field" id="FirstName" name="FirstName" required />
+                </div>
+
+                <div class="span_1_5 col">
+                    Last Name <span class="required">*</span>
+                </div>
+                <div class="span_2_5 col">
+                    <input type="text" class="signup-field" id="LastName" name="LastName" required/>
+                </div>
+
+                <div class="span_1_5 col">
+                    Email Address <span class="required">*</span>
+                </div>
+                <div class="span_2_5 col">
+                    <input type="email" class="signup-field" id="EmailAddress" name="EmailAddress" required />
+                </div>	
+				
+                <div class="span_1_5 col">
+                    <div class="field-name">Specialty <span class="required">*</span></div>
+                </div>
+                <div class="span_2_5 col">
+					<input type="text" class="signup-field" id="Speciality" name="Specialty" required/>
+                </div>
+
+                <div class="span_1_5 col">
+                    Institution <span class="required">*</span>
+                </div>
+                <div class="span_2_5 col">
+                    <input type="text" class="signup-field" id="Institution" name="Institution" required/>
+                </div>
+				
+                <div class="span_1_5 col">
+                    Password <span class="required">*</span>
+                </div>
+                <div class="span_2_5 col">
+					<input type="password" class="signup-field" id="Password" name="Password" required />
+                </div>
+				
+                <div class="span_1_5 col">
+                    Confirm Password <span class="required">*</span>
+                </div>
+                <div class="span_2_5 col">
+                    <input type="password" class="signup-field" id="ConfirmPassword" name="ConfirmPassword" required/>
+                </div>
+
+                <div class="span_1_5 col">
+                    How did you hear about ImageShare? 
+                </div>
+                <div class="span_2_5 col">
+                    <select class="signup-field" id="how-did-you-hear" name="HowDidYouHear">
+                        <option selected="selected" disabled>Please select</option>
+                        <option>Web search</option>
+                        <option>Sent image through ImageShare</option>
+                        <option>Received image through ImageShare</option>
+                        <option>Referral from colleague</option>
+                        <option>Information packet from hospital/practice group</option>
+                        <option id="other">Other</option>
+                    </select>
+                </div>
+            </div>
+                  
+            <div class="row">
+                <div class="span_8 col">
+                    <span class="button submit_button">SUBMIT</span>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
