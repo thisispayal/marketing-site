@@ -1,0 +1,19 @@
+#
+#  /abc/def/.htaccess -- per-dir config file for directory /abc/def
+#  Remember: /abc/def is the physical path of /xyz, i.e., the server
+#            has a 'Alias /xyz /abc/def' directive e.g.
+#
+
+RewriteEngine On
+
+#  let the server know that we were reached via /xyz and not
+#  via the physical path prefix /abc/def
+RewriteBase   /
+
+#  now the rewriting rules
+RewriteRule ^imageshare-overview\$ index.html#overview [R=301,L,NE]
+RewriteRule ^about-imageshare\$ index.html#overview [R=301,L,NE]
+RewriteRule ^how-it-works\$ index.html#uses [R=301,L,NE]
+RewriteRule ^about-us\$ index.html#about_us [R=301,L,NE]
+RewriteRule ^category/history\$ index.html#about_us [R=301,L,NE]
+RewriteRule ^hipaa-compliance-and-security\$ index.html#features [R=301,L,NE]
