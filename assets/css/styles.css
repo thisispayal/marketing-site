@@ -1,0 +1,63 @@
+/* Colors
+==================================================
+Dark Grey:     #565656     ||      rgb(86, 86, 86) 
+Orange:        #f76839     ||    rgb(247, 104, 57) 
+Light Blue:    #48bffa     ||     rgb(8, 191, 250) 
+Dark Blue:     #1886af     ||    rgb(24, 134, 175)
+Grey:          #767475     ||   rgb(118, 116, 117)
+==================================================
+*/
+
+/* Font Options: for development, not final listing
+==================================================
+italics
+    light: 300italic, 
+    normal: 400italic,
+    semi-bold: 600italic,
+    bold: 700italic
+    extra-bold: 800italic,
+regular
+    normal: 400,
+    light: 300, -> blockquote, overview sub-body
+    bold: 700, -> button, 
+    semi-bold: 600, -> testimonial name
+    extra-bold: 800
+==================================================
+*/
+
+/*TODO: consistentify font styling, make sectional layout proportional,
+make sizing responsive -- font, images, page layouts, javascript-based site navigation
+ */
+
+/* Sitewide Styling
+=========================================== */
+
+body{
+    font-size: 100%;
+}
+
+p{
+    line-height:1;
+}
+
+@media screen and (min-width:0em) and (max-width:25em){
+    body{
+        font-size: 1.2em;
+    }
+    
+    p{
+        line-height: 1.3;
+    }
+
+    section{
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .testimonial-slider{
+        padding-top: 1em;
+        padding-bottom: 2em;
+        color:white;
+        background-color:black;
+    }
+}
